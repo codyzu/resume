@@ -8,19 +8,26 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
     "start": "pnpm run build && node lib/cv.js",
-    "dev": "nodemon -i lib --ignore \"*.pdf\" --ext tsx --exec pnpm run start"
+    "dev": "nodemon --ignore lib --ignore \"*.pdf\" --watch src --ext tsx --exec pnpm run start",
+    "lint": "xo"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@react-pdf/renderer": "^4.1.6",
+    "@react-pdf/types": "^2.7.0",
     "@tsconfig/node22": "^22.0.0",
     "@types/node": "^22.10.6",
     "@types/react": "^19.0.7",
+    "eslint-config-xo-react": "^0.27.0",
+    "eslint-plugin-react": "^7.37.4",
+    "eslint-plugin-react-hooks": "^5.1.0",
     "nodemon": "^3.1.9",
+    "pkg-dir": "^8.0.0",
     "react": "^19.0.0",
     "react-pdf-tailwind": "^2.3.0",
-    "typescript": "^5.7.3"
+    "typescript": "^5.7.3",
+    "xo": "^0.60.0"
   }
 }

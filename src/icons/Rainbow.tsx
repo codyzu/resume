@@ -1,14 +1,4 @@
-import React from 'react';
-import {
-  Svg,
-  Path,
-  G,
-  Line,
-  LinearGradient,
-  Stop,
-  Defs,
-  Rect,
-} from '@react-pdf/renderer';
+import {Svg, LinearGradient, Stop, Defs, Rect} from '@react-pdf/renderer';
 import {type Style} from '@react-pdf/types';
 
 export default function Rainbow({style}: {readonly style: Style}) {

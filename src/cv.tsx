@@ -1,6 +1,5 @@
 // eslint-disable-line unicorn/filename-case
 import {basename} from 'node:path';
-import React from 'react';
 import {
   Page,
   Text,

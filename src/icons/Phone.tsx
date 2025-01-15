@@ -1,5 +1,4 @@
-import React from 'react';
-import {Svg, Path, G, Line} from '@react-pdf/renderer';
+import {Svg, Path} from '@react-pdf/renderer';
 import {type Style} from '@react-pdf/types';
 
 export default function Phone({style}: {readonly style: Style}) {

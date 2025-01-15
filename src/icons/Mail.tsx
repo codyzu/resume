@@ -1,5 +1,4 @@
-import React from 'react';
-import {Svg, Path, G, Line, Rect} from '@react-pdf/renderer';
+import {Svg, Path, G, Rect} from '@react-pdf/renderer';
 import {type Style} from '@react-pdf/types';
 
 export default function Mail({style}: {readonly style: Style}) {

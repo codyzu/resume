@@ -1,4 +1,3 @@
-import React from 'react';
 import {Svg, Path, G, Rect, Circle} from '@react-pdf/renderer';
 import {type Style} from '@react-pdf/types';
 

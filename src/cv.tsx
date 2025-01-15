@@ -79,12 +79,12 @@ function MyDocument() {
           <View style={style('h-full w-2/3')}>
             {/* Blue title bar */}
             {/* <View style={style('mt-12 bg-sky-800 pt-4 px-4 pb-2 text-white')}>
-            <Text style={style('text-5xl font-fira font-bold leading-normal')}>Cody Zuschlag</Text>
-            <View style={style('font-roboto font-bold gap-2')}>
-              <Link style={style('text-sm text-white no-underline')}>https://devrel.codyfactory.eu</Link>
-              <Text style={style('text-xs')}>Developer Relations Leader | Open Source Advocate | International Public Speaker</Text>
-            </View>
-          </View> */}
+              <Text style={style('text-5xl font-fira font-bold leading-normal')}>Cody Zuschlag</Text>
+              <View style={style('font-roboto font-bold gap-2')}>
+                <Link style={style('text-sm text-white no-underline')}>https://devrel.codyfactory.eu</Link>
+                <Text style={style('text-xs')}>Developer Relations Leader | Open Source Advocate | International Public Speaker</Text>
+              </View>
+            </View> */}
             <View style={style('mt-12 text-white')}>
               <Rainbow style={style('w-full h-full absolute')} />
               <View style={style('w-full pt-4 px-4 pb-2')}>
@@ -104,8 +104,8 @@ function MyDocument() {
                 </View>
               </View>
             </View>
-            <View style={style('px-4 py-4 text-xs gap-2')}>
-              <Text style={style('')}>
+            <View style={style('px-4 py-4 text-xs gap-2 leading-tight')}>
+              <Text>
                 <Text style={style('font-bold')}>
                   Results-driven Software Engineer
                 </Text>{' '}

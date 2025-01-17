@@ -24,6 +24,7 @@ import {workExperience} from './work-experience.js';
 import {conferences} from './conferences.js';
 import {awards} from './awards.js';
 import {skills} from './skills.js';
+import {projects} from './projects.js';
 
 console.log(style('flex-row-reverse items-start'));
 
@@ -31,7 +32,6 @@ console.log(style('flex-row-reverse items-start'));
 function MyDocument() {
   return (
     <Document>
-      {/* <Page size="A4" wrap={false} style={styles.page}> */}
       <Page wrap size="A4" style={style('font-sans')}>
         <View style={style('flex-row h-full')}>
           {/* Sidebar */}
@@ -64,9 +64,6 @@ function MyDocument() {
               <ContactInfo Icon={Passport}>
                 <Text>Dual Citizen (USA & France)</Text>
               </ContactInfo>
-              {/* <View style={tw('items-stretch w-full bg-red-500')}>
-              <Rainbow style={tw('w-full h-10 bg-red-blue')} />
-            </View> */}
               <View style={style('mt-5')}>
                 <Text style={style('text-xl font-mono font-bold')}>
                   &#123;Skills&#125;
@@ -75,16 +72,9 @@ function MyDocument() {
               {Object.entries(skills).map(([category, list]) => (
                 <SkillSection key={category} header={category} skills={list} />
               ))}
-              {/* <SkillSection
-                header="Programming Languages"
-                skills={['JavaScript, TypeScript', 'Python', 'Java, C#, C++']}
-              />
-              <SkillSection
-                header="Frameworks"
-                skills={['Node.js', 'React', 'React Native', 'Fastify']}
-              /> */}
             </View>
           </View>
+
           {/* Body  */}
           <View style={style('h-full w-2/3')}>
             {/* Blue title bar */}
@@ -143,6 +133,7 @@ function MyDocument() {
                 technologies and fostering collaborative, results- oriented
                 engineering environments.
               </Text>
+
               <SectionHeader>Education</SectionHeader>
               <View style={style('gap-0 text-2xs font-bold')}>
                 <Text>
@@ -155,41 +146,9 @@ function MyDocument() {
                 </Text>
               </View>
               <SectionHeader>Technical Projects</SectionHeader>
-              <List
-                list={{
-                  header: 'Full-Stack Application Development',
-                  items: [
-                    {
-                      text: 'Led a team to architect and build an AI powered CEO recruitment platform in Azure.',
-                    },
-                    {
-                      text: 'Architected and deployed a serverless CMS framework combining JAMstack and API-driven methodologies.',
-                    },
-                    {
-                      text: 'Built a cloud-first e-commerce platform leveraging React, GraphQL, and Node.js.',
-                    },
-                  ],
-                }}
-              />
-              <List
-                list={{
-                  header: 'Full-Stack Application Development',
-                  items: [
-                    {
-                      header: 'Node.js Core Development',
-                      text: 'Contributed documentation. Triaged issues to find issues suitable for first time contributors. Conducted workshops to onboard contributors to Node.js. Member of the OpenJs Cross Project Foundation.',
-                    },
-                    {
-                      header: 'GraphQL API Implementation',
-                      text: 'Designed and deployed GraphQL APIs for enterprise-scale applications. Integrated with React front-end for real-time data updates.',
-                    },
-                    {
-                      header: 'React-Based Design System',
-                      text: 'Created modular, reusable components for a cross-platform, cross-channel design system.',
-                    },
-                  ],
-                }}
-              />
+              {projects.map((project) => (
+                <List key={project.header} list={project} />
+              ))}
 
               <SectionHeader>Career Summary</SectionHeader>
               <View style={style('flex-row-reverse items-start')}>

@@ -1,15 +1,26 @@
-/* eslint-disable @typescript-eslint/naming-convention */
-export const skills: Record<string, string[]> = {
-  'Programming Languages': [
-    'JavaScript & TypeScript',
-    'Python',
-    'Java',
-    'C#',
-    'C++',
-  ],
-  Frameworks: ['Node.js', 'React', 'React Native', 'Fastify'],
-  'Cloud Platforms': ['Google Cloud', 'Firebase', 'AWS', 'Azure'],
-  'DevOps & CI/CD': ['Docker', 'Kubernetes', 'Jenkins', 'CircleCI'],
-  Databases: ['PostgreSQL', 'MongoDB', 'Firebase Firestore'],
-  Languages: ['English (native)', 'French (fluent)'],
-};
+export const skills: Array<{category: string; items: string[]}> = [
+  {
+    category: 'Programming Languages',
+    items: ['JavaScript & TypeScript', 'Python', 'Java', 'C#', 'C++'],
+  },
+  {
+    category: 'Frameworks',
+    items: ['Node.js', 'React', 'React Native', 'Fastify'],
+  },
+  {
+    category: 'Cloud Platforms',
+    items: ['Google Cloud', 'Firebase', 'AWS', 'Azure'],
+  },
+  {
+    category: 'DevOps & CI/CD',
+    items: ['Docker', 'Kubernetes', 'Jenkins', 'CircleCI'],
+  },
+  {
+    category: 'Databases',
+    items: ['PostgreSQL', 'MongoDB', 'Firebase Firestore'],
+  },
+  {
+    category: 'Languages',
+    items: ['English (native)', 'French (fluent)'],
+  },
+];

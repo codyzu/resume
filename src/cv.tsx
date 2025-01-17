@@ -52,8 +52,12 @@ function MyDocument() {
                   &#123;Skills&#125;
                 </Text>
               </View>
-              {Object.entries(skills).map(([category, list]) => (
-                <SkillSection key={category} header={category} skills={list} />
+              {skills.map((skillSection) => (
+                <SkillSection
+                  key={skillSection.category}
+                  header={skillSection.category}
+                  skills={skillSection.items}
+                />
               ))}
             </View>
           </View>
@@ -165,8 +169,8 @@ function MyDocument() {
             />
           ))}
           <SectionHeader>Conferences + Public Speaking</SectionHeader>
-          {Object.entries(conferences).map(([category, list]) => (
-            <List key={category} list={{header: category, items: list}} />
+          {conferences.map((conferenceSection) => (
+            <List key={conferenceSection.header} list={conferenceSection} />
           ))}
           <SectionHeader>Awards + Memberships</SectionHeader>
           <List list={{items: awards}} />

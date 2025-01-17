@@ -65,21 +65,39 @@ function MyDocument() {
           {/* Body  */}
           <View style={style('h-full w-2/3')}>
             {/* Blue title bar */}
-            <View style={style('mt-12 bg-sky-800 pt-4 px-4 pb-2 text-white')}>
-              <Text
-                style={style('text-5xl font-fira font-bold leading-normal')}
-              >
-                Cody Zuschlag
-              </Text>
-              <View style={style('font-roboto font-bold gap-2')}>
-                <Link style={style('text-sm text-white no-underline')}>
-                  https://devrel.codyfactory.eu
-                </Link>
-                <Text style={style('text-xs')}>
-                  Developer Relations Leader | Open Source Advocate |
-                  International Public Speaker
-                </Text>
+            <View
+              style={style(
+                'mt-12 bg-sky-800 pt-4 px-4 pb-2 text-white w-full gap-2',
+              )}
+            >
+              <View style={style('flex-row w-full items-start')}>
+                <View style={style('grow')}>
+                  <Text
+                    style={style('text-5xl font-fira font-bold leading-normal')}
+                  >
+                    Cody Zuschlag
+                  </Text>
+                  <Link
+                    style={style(
+                      'text-sm text-white no-underline font-roboto font-bold',
+                    )}
+                  >
+                    https://devrel.codyfactory.eu
+                  </Link>
+                </View>
+                <Image
+                  src={path.join(
+                    packageDirectory,
+                    'images',
+                    'devrel-codyfactory.png',
+                  )}
+                  style={style('w-[68px] h-[68px]')}
+                />
               </View>
+              <Text style={style('text-xs font-roboto font-bold')}>
+                Developer Relations Leader | Open Source Advocate |
+                International Public Speaker
+              </Text>
             </View>
             {/* <View style={style('mt-12 text-white')}>
               <Rainbow style={style('w-full h-full absolute')} />
@@ -141,11 +159,14 @@ function MyDocument() {
               <View style={style('flex-row-reverse items-start')}>
                 <View style={style('w-[116px] items-center justify-center')}>
                   <Text style={style('text-2xs')}>
-                    Details on <Link src="http://linked.com">LinkedIn</Link>
+                    Details on{' '}
+                    <Link style={style('no-underline')} src="http://linked.com">
+                      LinkedIn
+                    </Link>
                   </Text>
                   <Image
                     style={style('w-[68px] h-[68px]')}
-                    src={`${path.join(packageDirectory, 'images', 'devrel-codyfactory.png')}`}
+                    src={`${path.join(packageDirectory, 'images', 'linked-in.png')}`}
                   />
                 </View>
                 <WorkExperience experience={workExperience[0]} />

@@ -1,13 +1,7 @@
 import {join} from 'node:path';
 import {Font} from '@react-pdf/renderer';
 import {createTw} from 'react-pdf-tailwind';
-import {packageDirectorySync} from 'pkg-dir';
-
-const packageDirectory = packageDirectorySync();
-
-if (!packageDirectory) {
-  throw new Error('Could not find package directory');
-}
+import {packageDirectory} from './package-dir.js';
 
 Font.register({
   family: 'Roboto',
@@ -79,8 +73,11 @@ export const style = createTw({
       fira: ['Fira Sans'],
     },
     extend: {
-      colors: {
-        custom: '#bada55',
+      fontSize: {
+        /* eslint-disable @typescript-eslint/naming-convention */
+        '2xs': '0.67rem',
+        '2xl': ['1.5rem', {lineHeight: '1.25'}],
+        /* eslint-enable @typescript-eslint/naming-convention */
       },
     },
   },

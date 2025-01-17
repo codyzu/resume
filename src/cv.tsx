@@ -1,5 +1,5 @@
 // eslint-disable-line unicorn/filename-case
-import {basename} from 'node:path';
+import path, {basename} from 'node:path';
 import {
   Page,
   Text,
@@ -16,9 +16,16 @@ import Mail from './icons/Mail.js';
 import {style} from './style.js';
 import Passport from './icons/Passport.js';
 import SkillSection from './SkillsSection.js';
-import Rainbow from './icons/Rainbow.js';
+import List from './list/List.js';
+import SectionHeader from './SectionHeader.js';
+import WorkExperience from './list/WorkExperience.js';
+import {packageDirectory} from './package-dir.js';
+import {workExperience} from './work-experience.js';
+import {conferences} from './conferences.js';
+import {awards} from './awards.js';
+import {skills} from './skills.js';
 
-console.log(style('font-sans p-12 h-full text-sm'));
+console.log(style('flex-row-reverse items-start'));
 
 // Create Document Component
 function MyDocument() {
@@ -65,27 +72,39 @@ function MyDocument() {
                   &#123;Skills&#125;
                 </Text>
               </View>
-              <SkillSection
+              {Object.entries(skills).map(([category, list]) => (
+                <SkillSection key={category} header={category} skills={list} />
+              ))}
+              {/* <SkillSection
                 header="Programming Languages"
                 skills={['JavaScript, TypeScript', 'Python', 'Java, C#, C++']}
               />
               <SkillSection
                 header="Frameworks"
                 skills={['Node.js', 'React', 'React Native', 'Fastify']}
-              />
+              /> */}
             </View>
           </View>
           {/* Body  */}
           <View style={style('h-full w-2/3')}>
             {/* Blue title bar */}
-            {/* <View style={style('mt-12 bg-sky-800 pt-4 px-4 pb-2 text-white')}>
-              <Text style={style('text-5xl font-fira font-bold leading-normal')}>Cody Zuschlag</Text>
+            <View style={style('mt-12 bg-sky-800 pt-4 px-4 pb-2 text-white')}>
+              <Text
+                style={style('text-5xl font-fira font-bold leading-normal')}
+              >
+                Cody Zuschlag
+              </Text>
               <View style={style('font-roboto font-bold gap-2')}>
-                <Link style={style('text-sm text-white no-underline')}>https://devrel.codyfactory.eu</Link>
-                <Text style={style('text-xs')}>Developer Relations Leader | Open Source Advocate | International Public Speaker</Text>
+                <Link style={style('text-sm text-white no-underline')}>
+                  https://devrel.codyfactory.eu
+                </Link>
+                <Text style={style('text-xs')}>
+                  Developer Relations Leader | Open Source Advocate |
+                  International Public Speaker
+                </Text>
               </View>
-            </View> */}
-            <View style={style('mt-12 text-white')}>
+            </View>
+            {/* <View style={style('mt-12 text-white')}>
               <Rainbow style={style('w-full h-full absolute')} />
               <View style={style('w-full pt-4 px-4 pb-2')}>
                 <Text
@@ -103,10 +122,14 @@ function MyDocument() {
                   </Text>
                 </View>
               </View>
-            </View>
-            <View style={style('px-4 py-4 text-xs gap-2 leading-tight')}>
+            </View> */}
+            <View
+              style={style(
+                'pl-4 pr-12 py-4 text-xs gap-2 leading-tight w-full',
+              )}
+            >
               <Text>
-                <Text style={style('font-bold')}>
+                <Text style={style('font-black')}>
                   Results-driven Software Engineer
                 </Text>{' '}
                 with 17+ years of experience in Node.js, JavaScript, TypeScript,
@@ -120,28 +143,92 @@ function MyDocument() {
                 technologies and fostering collaborative, results- oriented
                 engineering environments.
               </Text>
-              <Text style={style('text-2xl font-mono font-bold')}>
-                &#123;Education&#125;
-              </Text>
-              <Text style={style('text-2xl font-mono font-bold')}>
-                &#123;Technical Projects&#125;
-              </Text>
-              <Text style={style('text-2xl font-mono font-bold')}>
-                &#123;Career Summary&#125;
-              </Text>
-              <Text style={style('text-lg font-bold')}>
-                Professional Experience
-              </Text>
-              <Text style={style('text-sm')}>Developer Relations Manager</Text>
+              <SectionHeader>Education</SectionHeader>
+              <View style={style('gap-0 text-2xs font-bold')}>
+                <Text>
+                  Bachelor (x2) of Science in Software & Computer Engineering
+                  Technology | 2007
+                </Text>
+                <Text>
+                  Top of Class, Honors | Oregon Institute of Technology (Klamath
+                  Falls, Oregon, USA)
+                </Text>
+              </View>
+              <SectionHeader>Technical Projects</SectionHeader>
+              <List
+                list={{
+                  header: 'Full-Stack Application Development',
+                  items: [
+                    {
+                      text: 'Led a team to architect and build an AI powered CEO recruitment platform in Azure.',
+                    },
+                    {
+                      text: 'Architected and deployed a serverless CMS framework combining JAMstack and API-driven methodologies.',
+                    },
+                    {
+                      text: 'Built a cloud-first e-commerce platform leveraging React, GraphQL, and Node.js.',
+                    },
+                  ],
+                }}
+              />
+              <List
+                list={{
+                  header: 'Full-Stack Application Development',
+                  items: [
+                    {
+                      header: 'Node.js Core Development',
+                      text: 'Contributed documentation. Triaged issues to find issues suitable for first time contributors. Conducted workshops to onboard contributors to Node.js. Member of the OpenJs Cross Project Foundation.',
+                    },
+                    {
+                      header: 'GraphQL API Implementation',
+                      text: 'Designed and deployed GraphQL APIs for enterprise-scale applications. Integrated with React front-end for real-time data updates.',
+                    },
+                    {
+                      header: 'React-Based Design System',
+                      text: 'Created modular, reusable components for a cross-platform, cross-channel design system.',
+                    },
+                  ],
+                }}
+              />
+
+              <SectionHeader>Career Summary</SectionHeader>
+              <View style={style('flex-row-reverse items-start')}>
+                <View style={style('w-[116px] items-center justify-center')}>
+                  <Text style={style('text-2xs')}>
+                    Details on <Link src="http://linked.com">LinkedIn</Link>
+                  </Text>
+                  <Image
+                    style={style('w-[68px] h-[68px]')}
+                    src={`${path.join(packageDirectory, 'images', 'devrel-codyfactory.png')}`}
+                  />
+                </View>
+                <WorkExperience experience={workExperience[0]} />
+              </View>
+              {workExperience.slice(1, 3).map((experience) => (
+                <WorkExperience
+                  key={`${experience.organization}${experience.dateRange}`}
+                  experience={experience}
+                />
+              ))}
             </View>
           </View>
         </View>
-        {/* <View style={styles.section}>
-        <Text>Section #1</Text>
-      </View>
-      <View style={styles.section}>
-        <Text>Section #2</Text>
-      </View> */}
+      </Page>
+      <Page wrap size="A4" style={style('font-sans p-12')}>
+        <View style={style('gap-2 w-full')}>
+          {workExperience.slice(3).map((experience) => (
+            <WorkExperience
+              key={`${experience.organization}${experience.dateRange}`}
+              experience={experience}
+            />
+          ))}
+          <SectionHeader>Conferences + Public Speaking</SectionHeader>
+          {Object.entries(conferences).map(([category, list]) => (
+            <List key={category} list={{header: category, items: list}} />
+          ))}
+          <SectionHeader>Awards + Memberships</SectionHeader>
+          <List list={{items: awards}} />
+        </View>
       </Page>
     </Document>
   );

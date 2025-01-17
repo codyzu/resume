@@ -1,5 +1,5 @@
 import {Text, View} from '@react-pdf/renderer';
-import {style} from '../style.js';
+import {style} from '../../utils/style.js';
 import ListItem, {type ListItem as ListItemType} from './ListItem.js';
 
 export type List = {

@@ -6,7 +6,7 @@ import {
   type PropsWithChildren,
 } from 'react';
 import {type Style} from '@react-pdf/types';
-import {style} from '../style.js';
+import {style} from '../../utils/style.js';
 
 export default function ContactInfo({
   Icon,

@@ -9,17 +9,17 @@ import {
   Image,
   Link,
 } from '@react-pdf/renderer';
-import House from './icons/House.js';
-import Phone from './icons/Phone.js';
-import ContactInfo from './contact/ContactInfo.js';
-import Mail from './icons/Mail.js';
-import {style} from './style.js';
-import Passport from './icons/Passport.js';
-import SkillSection from './SkillsSection.js';
-import List from './list/List.js';
-import SectionHeader from './SectionHeader.js';
-import WorkExperience from './list/WorkExperience.js';
-import {packageDirectory} from './package-dir.js';
+import House from './components/icons/House.js';
+import Phone from './components/icons/Phone.js';
+import ContactInfo from './components/contact/ContactInfo.js';
+import Mail from './components/icons/Mail.js';
+import {style} from './utils/style.js';
+import Passport from './components/icons/Passport.js';
+import SkillSection from './components/SkillsSection.js';
+import List from './components/list/List.js';
+import SectionHeader from './components/SectionHeader.js';
+import WorkExperience from './components/list/WorkExperience.js';
+import {packageDirectory} from './utils/package-dir.js';
 import {workExperience} from './work-experience.js';
 import {conferences} from './conferences.js';
 import {awards} from './awards.js';

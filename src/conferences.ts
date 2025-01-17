@@ -1,5 +1,4 @@
-import {List} from './list/List.js';
-import {type ListItem} from './list/ListItem.js';
+import {type ListItem} from './components/list/ListItem.js';
 
 export const conferences: Record<string, ListItem[]> = {
   // eslint-disable-next-line @typescript-eslint/naming-convention

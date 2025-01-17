@@ -1,4 +1,4 @@
-import {type WorkExperience} from './list/WorkExperience.js';
+import {type WorkExperience} from './components/list/WorkExperience.js';
 
 export const workExperience: WorkExperience[] = [
   {

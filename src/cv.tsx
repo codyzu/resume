@@ -25,6 +25,7 @@ import {conferences} from './conferences.js';
 import {awards} from './awards.js';
 import {skills} from './skills.js';
 import {projects} from './projects.js';
+import Contact from './components/contact/Contact.js';
 
 console.log(style('flex-row-reverse items-start'));
 
@@ -45,25 +46,7 @@ function MyDocument() {
               />
             </View>
             <View style={style('gap-2 pl-4')}>
-              <ContactInfo Icon={Phone}>
-                <Text>+33 7 86 65 94 37</Text>
-              </ContactInfo>
-              <ContactInfo Icon={Mail}>
-                <Link
-                  src="mailto:cody.zuschlag@gmail.com"
-                  style={style('text-white no-underline')}
-                >
-                  cody.zuschlag@gmail.com
-                </Link>
-              </ContactInfo>
-              <ContactInfo Icon={House}>
-                <Text>12b boulevard Jacques</Text>
-                <Text>74000 Annecy</Text>
-                <Text>France</Text>
-              </ContactInfo>
-              <ContactInfo Icon={Passport}>
-                <Text>Dual Citizen (USA & France)</Text>
-              </ContactInfo>
+              <Contact />
               <View style={style('mt-5')}>
                 <Text style={style('text-xl font-mono font-bold')}>
                   &#123;Skills&#125;

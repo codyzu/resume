@@ -40,7 +40,7 @@ function MyDocument() {
           >
             <View style={style('flex-row justify-center w-full pb-8')}>
               <Image
-                src={`${import.meta.dirname}/../profile.png`}
+                src={path.join(packageDirectory, 'images', 'profile.png')}
                 style={style('w-48 h-48 rounded-full')}
               />
             </View>

@@ -2,3 +2,4 @@ node_modules
 *.pdf
 lib
 .DS_Store
+downloaded-fonts

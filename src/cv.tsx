@@ -180,11 +180,11 @@ function MyDocument() {
               experience={experience}
             />
           ))}
-          <SectionHeader>Conferences + Public Speaking</SectionHeader>
+          <SectionHeader>Conferences | Public Speaking</SectionHeader>
           {conferences.map((conferenceSection) => (
             <List key={conferenceSection.header} list={conferenceSection} />
           ))}
-          <SectionHeader>Awards + Memberships</SectionHeader>
+          <SectionHeader>Awards | Memberships</SectionHeader>
           <List list={{items: awards}} />
         </View>
       </Page>

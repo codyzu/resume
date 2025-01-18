@@ -1,5 +1,6 @@
-import {Text, View} from '@react-pdf/renderer';
+import {View} from '@react-pdf/renderer';
 import {style} from '../utils/style.js';
+import Text from './Text.js';
 
 export type SkillList = {
   readonly header: string;

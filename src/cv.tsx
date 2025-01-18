@@ -1,20 +1,7 @@
 // eslint-disable-line unicorn/filename-case
 import path, {basename} from 'node:path';
-import {
-  Page,
-  Text,
-  View,
-  Document,
-  render,
-  Image,
-  Link,
-} from '@react-pdf/renderer';
-import House from './components/icons/House.js';
-import Phone from './components/icons/Phone.js';
-import ContactInfo from './components/contact/ContactInfo.js';
-import Mail from './components/icons/Mail.js';
+import {Page, View, Document, render, Image, Link} from '@react-pdf/renderer';
 import {style} from './utils/style.js';
-import Passport from './components/icons/Passport.js';
 import SkillSection from './components/SkillsSection.js';
 import List from './components/list/List.js';
 import SectionHeader from './components/SectionHeader.js';
@@ -26,6 +13,7 @@ import {awards} from './awards.js';
 import {skills} from './skills.js';
 import {projects} from './projects.js';
 import Contact from './components/contact/Contact.js';
+import Text from './components/Text.js';
 
 console.log(style('flex-row-reverse items-start'));
 

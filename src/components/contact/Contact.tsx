@@ -1,10 +1,11 @@
-import {Link, Text} from '@react-pdf/renderer';
+import {Link} from '@react-pdf/renderer';
 import Phone from '../icons/Phone.js';
 import Mail from '../icons/Mail.js';
 import {style} from '../../utils/style.js';
 import House from '../icons/House.js';
 import Passport from '../icons/Passport.js';
 import {contactInfo} from '../../contact-info.js';
+import Text from '../Text.js';
 import ContactInfo from './ContactInfo.js';
 
 export default function Contact() {

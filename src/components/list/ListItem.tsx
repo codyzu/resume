@@ -1,6 +1,7 @@
-import {Text, View} from '@react-pdf/renderer';
+import {View} from '@react-pdf/renderer';
 import {style} from '../../utils/style.js';
 import Chevron from '../icons/Chevron.js';
+import Text from '../Text.js';
 
 export type ListItem = {
   readonly header?: string;
@@ -15,24 +16,8 @@ export default function ListItemWithHeader({item}: {readonly item: ListItem}) {
         {item.header ? (
           <Text style={style('font-black')}>{item.header} | </Text>
         ) : null}
-        {replaceAsterisksWithBold(item.text)}
+        {item.text}
       </Text>
     </View>
   );
-}
-
-function replaceAsterisksWithBold(text: string) {
-  const segments = text.split(/(\*[^*]+\*)/);
-  return segments.map((segment, index) => {
-    if (segment.startsWith('*') && segment.endsWith('*')) {
-      return (
-        // eslint-disable-next-line react/no-array-index-key
-        <Text key={index} style={style('font-black')}>
-          {segment.slice(1, -1)}
-        </Text>
-      );
-    }
-
-    return segment;
-  });
 }

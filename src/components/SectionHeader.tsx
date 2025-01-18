@@ -1,6 +1,6 @@
-import {Text} from '@react-pdf/renderer';
 import {type PropsWithChildren} from 'react';
 import {style} from '../utils/style.js';
+import Text from './Text.js';
 
 export default function SectionHeader({children}: PropsWithChildren) {
   return (

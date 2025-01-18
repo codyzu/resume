@@ -79,7 +79,7 @@ function MyDocument() {
                     'images',
                     'devrel-codyfactory.png',
                   )}
-                  style={style('w-[68px] h-[68px]')}
+                  style={style('w-[68px] h-[68px] my-1')}
                 />
               </View>
               <Text style={style('text-xs font-roboto font-bold')}>
@@ -146,9 +146,12 @@ function MyDocument() {
               <SectionHeader>Career Summary</SectionHeader>
               <View style={style('flex-row-reverse items-start')}>
                 <View style={style('w-[116px] items-center justify-center')}>
-                  <Text style={style('text-2xs')}>
+                  <Text style={style('text-2xs italic')}>
                     Details on{' '}
-                    <Link style={style('no-underline')} src="http://linked.com">
+                    <Link
+                      style={style('no-underline text-black')}
+                      src="http://linked.com"
+                    >
                       LinkedIn
                     </Link>
                   </Text>

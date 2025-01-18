@@ -1,36 +1,47 @@
+import {type PropsWithChildren} from 'react';
 import {Text as PdfText} from '@react-pdf/renderer';
 import {type Style} from '@react-pdf/types';
-import {type PropsWithChildren} from 'react';
 import {style} from '../utils/style.js';
 
 export default function Text({
   children,
-  style: customStyle,
+  style: componentStyle,
 }: PropsWithChildren<{readonly style?: Style}>) {
   const transformedChildren =
     Array.isArray(children) && typeof children !== 'string'
       ? children.map((child) => {
           if (typeof child === 'string') {
-            return replaceAsterisksWithBold(child);
+            return replaceAsterisksAndUnderscores(child);
           }
 
           // eslint-disable-next-line @typescript-eslint/no-unsafe-return
           return child;
         })
-      : children;
+      : typeof children === 'string'
+        ? replaceAsterisksAndUnderscores(children)
+        : children;
 
-  return <PdfText style={customStyle}>{transformedChildren}</PdfText>;
+  return <PdfText style={componentStyle}>{transformedChildren}</PdfText>;
 }
 
-function replaceAsterisksWithBold(text: string) {
-  const segments = text.split(/(\*[^*]+\*)/);
+function replaceAsterisksAndUnderscores(text: string) {
+  const segments = text.split(/(\*[^*]+\*|_[^_]+_)/);
   return segments.map((segment, index) => {
     if (segment.startsWith('*') && segment.endsWith('*')) {
       return (
         // eslint-disable-next-line react/no-array-index-key
-        <Text key={index} style={style('font-black')}>
+        <PdfText key={index} style={style('font-black')}>
           {segment.slice(1, -1)}
-        </Text>
+        </PdfText>
+      );
+    }
+
+    if (segment.startsWith('_') && segment.endsWith('_')) {
+      return (
+        // eslint-disable-next-line react/no-array-index-key
+        <PdfText key={index} style={style('italic')}>
+          {segment.slice(1, -1)}
+        </PdfText>
       );
     }
 

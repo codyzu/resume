@@ -11,9 +11,6 @@ import AwardsMemberships from './components/sections/AwardsMemberships.js';
 import Title from './components/sections/Title.js';
 import Sidebar from './components/sections/Sidebar.js';
 import Experience from './components/sections/Experience.js';
-import Github from './components/icons/Github.js';
-import LinkedIn from './components/icons/LinkedIn.js';
-import Text from './components/Text.js';
 import Links from './components/sections/Links.js';
 
 console.log(style('flex-row-reverse items-start text-base'));

@@ -50,7 +50,7 @@ function MyDocument() {
         </View>
       </Page>
       <Page wrap size="A4" style={style('font-sans p-16')}>
-        <View style={style('gap-2 w-full')}>
+        <View style={style('gap-4 w-full')}>
           <Experience start={3} />
           <Conferences />
           <AwardsMemberships />

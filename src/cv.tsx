@@ -15,7 +15,7 @@ import {projects} from './projects.js';
 import Contact from './components/contact/Contact.js';
 import Text from './components/Text.js';
 
-console.log(style('flex-row-reverse items-start'));
+console.log(style('flex-row-reverse items-start text-base'));
 
 // Create Document Component
 function MyDocument() {
@@ -35,11 +35,7 @@ function MyDocument() {
             </View>
             <View style={style('gap-2 pl-4')}>
               <Contact />
-              <View style={style('mt-5')}>
-                <Text style={style('text-xl font-mono font-bold')}>
-                  &#123;Skills&#125;
-                </Text>
-              </View>
+              <SectionHeader>Skills</SectionHeader>
               {skills.map((skillSection) => (
                 <SkillSection
                   key={skillSection.category}
@@ -61,13 +57,13 @@ function MyDocument() {
               <View style={style('flex-row w-full items-start')}>
                 <View style={style('grow')}>
                   <Text
-                    style={style('text-5xl font-fira font-bold leading-normal')}
+                    style={style('text-3xl font-fira font-bold leading-normal')}
                   >
                     Cody Zuschlag
                   </Text>
                   <Link
                     style={style(
-                      'text-sm text-white no-underline font-roboto font-bold',
+                      'text-xl text-white no-underline font-roboto font-bold',
                     )}
                   >
                     https://devrel.codyfactory.eu
@@ -82,7 +78,7 @@ function MyDocument() {
                   style={style('w-[68px] h-[68px] my-1')}
                 />
               </View>
-              <Text style={style('text-xs font-roboto font-bold')}>
+              <Text style={style('text-lg font-roboto font-bold')}>
                 Developer Relations Leader | Open Source Advocate |
                 International Public Speaker
               </Text>
@@ -91,15 +87,15 @@ function MyDocument() {
               <Rainbow style={style('w-full h-full absolute')} />
               <View style={style('w-full pt-4 px-4 pb-2')}>
                 <Text
-                  style={style('text-5xl font-fira font-bold leading-normal')}
+                  style={style('text-3xl font-fira font-bold leading-normal')}
                 >
                   Cody Zuschlag
                 </Text>
                 <View style={style('font-roboto font-bold gap-2')}>
-                  <Link style={style('text-sm text-white no-underline')}>
+                  <Link style={style('text-xl text-white no-underline')}>
                     https://devrel.codyfactory.eu
                   </Link>
-                  <Text style={style('text-xs')}>
+                  <Text style={style('text-lg')}>
                     Developer Relations Leader | Open Source Advocate |
                     International Public Speaker
                   </Text>
@@ -108,7 +104,7 @@ function MyDocument() {
             </View> */}
             <View
               style={style(
-                'pl-4 pr-12 py-4 text-xs gap-2 leading-tight w-full',
+                'pl-4 pr-12 py-4 text-lg gap-2 leading-tight w-full',
               )}
             >
               <Text>
@@ -128,7 +124,7 @@ function MyDocument() {
               </Text>
 
               <SectionHeader>Education</SectionHeader>
-              <View style={style('gap-0 text-2xs font-bold')}>
+              <View style={style('gap-0 text-base font-bold')}>
                 <Text>
                   Bachelor (x2) of Science in Software & Computer Engineering
                   Technology | 2007
@@ -146,7 +142,7 @@ function MyDocument() {
               <SectionHeader>Career Summary</SectionHeader>
               <View style={style('flex-row-reverse items-start')}>
                 <View style={style('w-[116px] items-center justify-center')}>
-                  <Text style={style('text-2xs italic')}>
+                  <Text style={style('text-base italic')}>
                     Details on{' '}
                     <Link
                       style={style('no-underline text-black')}

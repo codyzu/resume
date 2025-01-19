@@ -15,7 +15,7 @@ export default function ContactInfo({
   return (
     <View style={style('flex-row items-start gap-2 overflow-hidden')}>
       <Icon style={style('w-5 h-5 shrink-0')} />
-      <View style={style('text-sm shrink')}>{children}</View>
+      <View style={style('text-xl shrink')}>{children}</View>
     </View>
   );
 }

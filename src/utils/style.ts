@@ -75,8 +75,11 @@ export const style = createTw({
     extend: {
       fontSize: {
         /* eslint-disable @typescript-eslint/naming-convention */
-        '2xs': '0.67rem',
+        base: ['0.70834rem', {lineHeight: '1.25'}],
+        lg: ['0.75rem', {lineHeight: '1.25'}],
+        xl: ['0.875rem', {lineHeight: '1.25'}],
         '2xl': ['1.5rem', {lineHeight: '1.25'}],
+        '3xl': ['3rem', {lineHeight: '1.25'}],
         /* eslint-enable @typescript-eslint/naming-convention */
       },
     },

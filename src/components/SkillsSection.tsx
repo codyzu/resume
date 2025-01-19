@@ -9,7 +9,7 @@ export type SkillList = {
 
 export default function SkillSection({skills, header}: SkillList) {
   return (
-    <View style={style('text-sm w-full leading-tight')}>
+    <View style={style('text-xl w-full leading-tight')}>
       <Text style={style('font-black')}>{header.toLocaleUpperCase()}</Text>
       {skills.map((skill) => (
         <Text key={skill}>{skill}</Text>

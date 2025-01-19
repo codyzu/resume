@@ -12,11 +12,11 @@ export default function ListComponent({list}: {readonly list: List}) {
   return (
     <View style={style('gap-1 flex-auto w-full')}>
       {list.header && (
-        <Text style={style('text-2xs font-black leading-none w-full')}>
+        <Text style={style('text-base font-black leading-none w-full')}>
           {list.header}
         </Text>
       )}
-      <View style={style('pl-1 text-2xs flex-auto w-full')}>
+      <View style={style('pl-1 text-base flex-auto w-full')}>
         {list.items.map((item) => (
           <ListItem key={item.text} item={item} />
         ))}

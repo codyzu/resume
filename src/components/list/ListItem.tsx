@@ -12,7 +12,7 @@ export default function ListItemWithHeader({item}: {readonly item: ListItem}) {
   return (
     <View style={style('gap-1 flex-row items-start w-full')}>
       <Chevron style={style('w-2 h-2 mt-[2px]')} />
-      <Text style={style('text-2xs leading-tight w-full')}>
+      <Text style={style('text-base leading-tight w-full')}>
         {item.header ? (
           <Text style={style('font-black')}>{item.header} | </Text>
         ) : null}

@@ -6,7 +6,7 @@ import SkillSection from './SkillsSection.js';
 
 export default function Skills() {
   return (
-    <View style={style('gap-2')}>
+    <View style={style('gap-4')}>
       <SectionHeader color="white">Skills</SectionHeader>
       {skills.map((skillSection) => (
         <SkillSection

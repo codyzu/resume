@@ -9,7 +9,7 @@ export default function Sidebar({imagePath}: {readonly imagePath: string}) {
       <View style={style('flex-row justify-center w-full')}>
         <Image src={imagePath} style={style('w-48 h-48 rounded-full')} />
       </View>
-      <View style={style('gap-4 pl-4 w-full')}>
+      <View style={style('gap-4 pl-8 w-full')}>
         <Contact />
         <Skills />
       </View>

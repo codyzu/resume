@@ -8,7 +8,9 @@ export default function AwardsMemberships() {
   return (
     <View style={style('gap-2 w-full')}>
       <SectionHeader>Awards | Memberships</SectionHeader>
-      <List list={{items: awards}} />
+      <View style={style('-ml-1')}>
+        <List list={{items: awards}} />
+      </View>
     </View>
   );
 }

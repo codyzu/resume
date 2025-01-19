@@ -80,7 +80,7 @@ export const twStyles = createTw({
         lg: ['0.75rem', {lineHeight: '1.25'}],
         xl: ['0.875rem', {lineHeight: '1.25'}],
         '2xl': ['1.5rem', {lineHeight: '1.25'}],
-        '3xl': ['3rem', {lineHeight: '1.25'}],
+        '3xl': ['3.25rem', {lineHeight: '1.25'}],
         /* eslint-enable @typescript-eslint/naming-convention */
       },
     },

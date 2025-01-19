@@ -108,19 +108,17 @@ function MyDocument() {
               )}
             >
               <Text>
-                <Text style={style('font-black')}>
-                  Results-driven Software Engineer
-                </Text>{' '}
-                with 17+ years of experience in Node.js, JavaScript, TypeScript,
-                and firmware. Skilled in designing and deploying scalable,
-                full-stack applications leveraging React, GraphQL, serverless
-                architectures, and AI integrations to enhance user experiences
-                and drive efficiency. Proven track record of leading development
-                teams, advancing open-source ecosystems, and delivering
-                technical excellence on high-impact projects. Passionate about
-                building innovative, user-centric solutions through modern web
-                technologies and fostering collaborative, results- oriented
-                engineering environments.
+                *Results-driven Software Engineer* with 17+ years of experience
+                in Node.js, JavaScript, TypeScript, and firmware. Skilled in
+                designing and deploying scalable, full-stack applications
+                leveraging React, GraphQL, serverless architectures, and AI
+                integrations to enhance user experiences and drive efficiency.
+                Proven track record of leading development teams, advancing
+                open-source ecosystems, and delivering technical excellence on
+                high-impact projects. Passionate about building innovative,
+                user-centric solutions through modern web technologies and
+                fostering collaborative, results- oriented engineering
+                environments.
               </Text>
 
               <SectionHeader>Education</SectionHeader>
@@ -152,7 +150,7 @@ function MyDocument() {
                     </Link>
                   </Text>
                   <Image
-                    style={style('w-[68px] h-[68px]')}
+                    style={style('w-[70px] h-[70px]')}
                     src={`${path.join(packageDirectory, 'images', 'linked-in.png')}`}
                   />
                 </View>

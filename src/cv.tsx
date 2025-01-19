@@ -35,7 +35,7 @@ function MyDocument() {
             </View>
             <View style={style('gap-2 pl-4')}>
               <Contact />
-              <SectionHeader>Skills</SectionHeader>
+              <SectionHeader color="white">Skills</SectionHeader>
               {skills.map((skillSection) => (
                 <SkillSection
                   key={skillSection.category}

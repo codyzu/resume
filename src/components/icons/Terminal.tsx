@@ -1,12 +1,18 @@
 import {Svg, Path, G} from '@react-pdf/renderer';
 import {type Style} from '@react-pdf/types';
 
-export default function Terminal({style}: {readonly style: Style}) {
+export default function Terminal({
+  style,
+  color,
+}: {
+  readonly style: Style;
+  readonly color?: string;
+}) {
   return (
     <Svg viewBox="0 0 24 24" style={style}>
       <G
         fill="none"
-        stroke="currentColor"
+        stroke={color ?? 'currentColor'}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"

@@ -1,6 +1,7 @@
 import {join} from 'node:path';
 import {Font} from '@react-pdf/renderer';
 import {createTw} from 'react-pdf-tailwind';
+import {type Style} from '@react-pdf/types';
 import {packageDirectory} from './package-dir.js';
 
 Font.register({
@@ -64,7 +65,7 @@ Font.register({
   ],
 });
 
-export const style = createTw({
+export const twStyles = createTw({
   theme: {
     fontFamily: {
       sans: ['Lato'],
@@ -85,3 +86,7 @@ export const style = createTw({
     },
   },
 });
+
+export function style(...classNames: any[]): Style {
+  return twStyles(classNames.filter(Boolean).join(' '));
+}

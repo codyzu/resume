@@ -6,7 +6,7 @@ import Text from './Text.js';
 
 export default function LinkedIn() {
   return (
-    <View style={style('w-[116px] items-center justify-center')}>
+    <View style={style('w-[116px] items-center justify-center -mr-4')}>
       <Text style={style('text-base italic')}>
         Details on{' '}
         <Link style={style('no-underline text-black')} src="http://linked.com">

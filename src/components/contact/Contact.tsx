@@ -1,4 +1,4 @@
-import {Link} from '@react-pdf/renderer';
+import {Link, View} from '@react-pdf/renderer';
 import Phone from '../icons/Phone.js';
 import Mail from '../icons/Mail.js';
 import {style} from '../../utils/style.js';
@@ -10,7 +10,7 @@ import ContactInfo from './ContactInfo.js';
 
 export default function Contact() {
   return (
-    <>
+    <View style={style('gap-1')}>
       <ContactInfo Icon={Phone}>
         <Text>{contactInfo.phone}</Text>
       </ContactInfo>
@@ -30,6 +30,6 @@ export default function Contact() {
       <ContactInfo Icon={Passport}>
         <Text>{contactInfo.nationality}</Text>
       </ContactInfo>
-    </>
+    </View>
   );
 }

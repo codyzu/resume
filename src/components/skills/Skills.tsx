@@ -1,5 +1,5 @@
 import {View} from '@react-pdf/renderer';
-import {skills} from '../../skills.js';
+import {skills} from '../../data/skills.js';
 import {style} from '../../utils/style.js';
 import SectionHeader from '../SectionHeader.js';
 import SkillSection from './SkillsSection.js';

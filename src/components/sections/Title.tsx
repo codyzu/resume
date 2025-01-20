@@ -3,7 +3,7 @@ import {Image, Link, View} from '@react-pdf/renderer';
 import {style} from '../../utils/style.js';
 import Text from '../Text.js';
 import {packageDirectory} from '../../utils/package-dir.js';
-import {keyWords} from '../../key-words.js';
+import {keyWords} from '../../data/key-words.js';
 
 export default function Title() {
   return (

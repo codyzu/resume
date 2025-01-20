@@ -1,4 +1,4 @@
-import {summary} from '../../summary.js';
+import {summary} from '../../data/summary.js';
 import Text from '../Text.js';
 
 export default function Summary() {

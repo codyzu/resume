@@ -1,4 +1,4 @@
-import {type ListItem} from './components/list/ListItem.js';
+import {type ListItem} from '../components/list/ListItem.js';
 
 export const conferences: Array<{header: string; items: ListItem[]}> = [
   {

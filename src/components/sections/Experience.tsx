@@ -1,7 +1,7 @@
 import {View} from '@react-pdf/renderer';
 import SectionHeader from '../SectionHeader.js';
 import {style} from '../../utils/style.js';
-import {workExperience} from '../../work-experience.js';
+import {workExperience} from '../../data/work-experience.js';
 import WorkExperience from '../list/WorkExperience.js';
 import LinkedIn from '../LinkedIn.js';
 

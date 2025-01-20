@@ -1,4 +1,4 @@
-import {type List} from './components/list/List.js';
+import {type List} from '../components/list/List.js';
 
 export const projects: List[] = [
   {

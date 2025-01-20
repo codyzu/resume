@@ -1,6 +1,6 @@
 import {View} from '@react-pdf/renderer';
 import {style} from '../../utils/style.js';
-import {education} from '../../ecucation.js';
+import {education} from '../../data/ecucation.js';
 import SectionHeader from '../SectionHeader.js';
 import Text from '../Text.js';
 

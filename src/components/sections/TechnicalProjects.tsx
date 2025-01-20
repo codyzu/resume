@@ -1,5 +1,5 @@
 import {View} from '@react-pdf/renderer';
-import {projects} from '../../projects.js';
+import {projects} from '../../data/projects.js';
 import List from '../list/List.js';
 import SectionHeader from '../SectionHeader.js';
 import {style} from '../../utils/style.js';

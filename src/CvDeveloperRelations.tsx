@@ -1,4 +1,3 @@
-// eslint-disable-line unicorn/filename-case
 import path, {basename} from 'node:path';
 import {Page, View, Document, render, Link} from '@react-pdf/renderer';
 import {style} from './utils/style.js';
@@ -12,11 +11,14 @@ import Title from './components/sections/Title.js';
 import Sidebar from './components/sections/Sidebar.js';
 import Experience from './components/sections/Experience.js';
 import Links from './components/sections/Links.js';
+import {type Version} from './version.js';
 
 console.log(style('flex-row-reverse items-start text-base'));
 
+const version: Version = 'devrel';
+
 // Create Document Component
-function MyDocument() {
+function CvDeveloperRelations() {
   return (
     <Document>
       <Page wrap size="A4" style={style('font-sans')}>
@@ -32,25 +34,26 @@ function MyDocument() {
 
           {/* Body  */}
           <View style={style('h-full w-2/3')}>
-            <Title />
+            <Title version={version} />
             <View
               style={style(
-                'pl-4 pr-12 pt-1 text-lg gap-2 leading-tight w-full',
+                'pl-4 pr-12 pt-1 text-lg gap-1 leading-tight w-full',
               )}
             >
               <Links />
-              <Summary />
+              <Summary version={version} />
               <Education />
-              <TechnicalProjects />
-              <Experience start={0} end={3} />
+              <Conferences version={version} />
             </View>
           </View>
         </View>
       </Page>
       <Page wrap size="A4" style={style('font-sans p-16')}>
         <View style={style('gap-4 w-full')}>
-          <Experience start={3} />
-          <Conferences />
+          <View style={style('gap-2 w-full')}>
+            <Experience start={0} end={2} qrCodeSize={100} />
+            <Experience start={2} />
+          </View>
           <AwardsMemberships />
         </View>
       </Page>
@@ -58,4 +61,9 @@ function MyDocument() {
   );
 }
 
-void render(<MyDocument />, `${basename(import.meta.filename, 'js')}pdf`);
+export async function renderCvDeveloperRelations() {
+  return render(
+    <CvDeveloperRelations />,
+    `${basename(import.meta.filename, 'js')}pdf`,
+  );
+}

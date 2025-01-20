@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "type": "module",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
-    "start": "pnpm run build && node lib/cv.js",
+    "start": "pnpm run build && node lib/index.js",
     "dev": "nodemon --ignore lib --ignore \"*.pdf\" --watch src --ext tsx,ts --exec pnpm run start",
     "lint": "xo"
   },

@@ -4,7 +4,7 @@ import {style} from '../utils/style.js';
 import {packageDirectory} from '../utils/package-dir.js';
 import Text from './Text.js';
 
-export default function LinkedIn() {
+export default function LinkedIn({qrCodeSize}: {readonly qrCodeSize?: number}) {
   return (
     <View style={style('w-[116px] items-center justify-center -mr-4')}>
       <Text style={style('text-base italic')}>
@@ -14,7 +14,7 @@ export default function LinkedIn() {
         </Link>
       </Text>
       <Image
-        style={style('w-[70px] h-[70px]')}
+        style={style(`w-[${qrCodeSize ?? 70}px] h-[${qrCodeSize ?? 70}px]`)}
         src={`${path.join(packageDirectory, 'images', 'linked-in.png')}`}
       />
     </View>

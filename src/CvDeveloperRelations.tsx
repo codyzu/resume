@@ -28,6 +28,7 @@ function CvDeveloperRelations() {
             style={style('h-full w-1/3 bg-neutral-600 text-white px-4 py-8')}
           >
             <Sidebar
+              version={version}
               imagePath={`${path.join(packageDirectory, 'images', 'profile.png')}`}
             />
           </View>
@@ -37,7 +38,7 @@ function CvDeveloperRelations() {
             <Title version={version} />
             <View
               style={style(
-                'pl-4 pr-12 pt-1 text-lg gap-1 leading-tight w-full',
+                'pl-4 pr-12 pt-1 text-lg gap-4 leading-tight w-full',
               )}
             >
               <Links />
@@ -49,10 +50,10 @@ function CvDeveloperRelations() {
         </View>
       </Page>
       <Page wrap size="A4" style={style('font-sans p-16')}>
-        <View style={style('gap-4 w-full')}>
+        <View style={style('gap-8 w-full')}>
           <View style={style('gap-2 w-full')}>
-            <Experience start={0} end={2} qrCodeSize={100} />
-            <Experience start={2} />
+            <Experience version={version} start={0} end={2} qrCodeSize={100} />
+            <Experience version={version} start={2} />
           </View>
           <AwardsMemberships />
         </View>

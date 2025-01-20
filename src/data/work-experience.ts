@@ -1,6 +1,7 @@
 import {type WorkExperience} from '../components/list/WorkExperience.js';
+import {type Version} from '../version.js';
 
-export const workExperience: WorkExperience[] = [
+export const developerExperience: WorkExperience[] = [
   {
     role: 'Developer Relations Community Lead',
     organization: 'Nearform',
@@ -20,7 +21,7 @@ export const workExperience: WorkExperience[] = [
     dateRange: '2022 - 2024',
     experiences: [
       'Facilitated Node.js contributions as an OpenJS Foundation member, fostering collaboration and innovation.',
-      'Delivered technical workshops for clients and teams, promoting best practices in JavaScript and Node.js.',
+      'Delivered technical workshops for clients, teams, and conferences, promoting best practices in JavaScript and Node.js.',
       'Maintained the FINOS a11y-theme-builder project, enhancing accessibility in financial platforms.',
       'Produced high-impact technical content, including conference talks and blogs, elevating Nearform’s thought leadership.',
     ],
@@ -64,7 +65,7 @@ export const workExperience: WorkExperience[] = [
     location: 'Annecy, France',
     dateRange: '2013-2017',
     experiences: [
-      'Built scalable APIs using API Builder and developed CI/CD pipelines, enhancing developer productivity.',
+      'Contributed to API builder for rapidly building APIs with a a scalable cloud service and developed CI/CD pipelines, enhancing developer productivity.',
       'Designed a performance metrics pipeline in Python and contributed to enterprise Java applications for API management.',
     ],
   },
@@ -99,3 +100,29 @@ export const workExperience: WorkExperience[] = [
     ],
   },
 ];
+
+const developerRelationsExperience = structuredClone(developerExperience);
+developerRelationsExperience[0].experiences = [
+  developerExperience[0].experiences[0],
+  'Designed and executed a global event speaking program, resulting in significant increase in speaker representation from Nearform at international conferences.',
+  'Championed OSS engagement, mentoring employees to contribute to high-profile projects like Node.js and Fastify.js, leading to recognition within the OpenJS Foundation.',
+  'Lead technical content process revamping to foster content contributions throughout the organization.',
+];
+
+developerRelationsExperience[1].experiences = [
+  developerExperience[1].experiences[0],
+  'International conference speaking.',
+  'Video content creation including a series of Fireside Chats with tech leaders.',
+  'Performed pre-sales demos and lead generation at events.',
+];
+
+developerRelationsExperience[2].experiences = [
+  'Developed and taught cutting edge Web Development course teaching 3rd year students how to develop full-stack web applications using JavaScript technologies and deployed to GCP. Ensured alignment with involving industry standards.',
+  ...developerRelationsExperience[2].experiences,
+];
+
+export const workExperience: Record<Version, WorkExperience[]> = {
+  dev: developerExperience,
+  devrel: developerRelationsExperience,
+  hw: [],
+};

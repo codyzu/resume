@@ -28,6 +28,7 @@ function CvDeveloper() {
             style={style('h-full w-1/3 bg-neutral-600 text-white px-4 py-8')}
           >
             <Sidebar
+              version={version}
               imagePath={`${path.join(packageDirectory, 'images', 'profile.png')}`}
             />
           </View>
@@ -44,15 +45,15 @@ function CvDeveloper() {
               <Summary version={version} />
               <Education />
               <TechnicalProjects />
-              <Experience start={0} end={1} />
-              <Experience start={1} end={3} />
+              <Experience version={version} start={0} end={1} />
+              <Experience version={version} start={1} end={3} />
             </View>
           </View>
         </View>
       </Page>
       <Page wrap size="A4" style={style('font-sans p-16')}>
         <View style={style('gap-4 w-full')}>
-          <Experience start={3} />
+          <Experience version={version} start={3} />
           <Conferences version={version} />
           <AwardsMemberships />
         </View>

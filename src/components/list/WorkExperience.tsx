@@ -5,7 +5,7 @@ export type WorkExperience = {
   readonly dateRange: string;
   readonly organization: string;
   readonly location: string;
-  readonly experiences: string[];
+  experiences: string[];
 };
 
 export default function WorkExperienceComponent({

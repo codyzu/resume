@@ -1,4 +1,5 @@
-import path, {basename} from 'node:path';
+import path, {basename, join} from 'node:path';
+import {cwd} from 'node:process';
 import {Page, View, Document, render, Link} from '@react-pdf/renderer';
 import {style} from './utils/style.js';
 import {packageDirectory} from './utils/package-dir.js';
@@ -63,5 +64,6 @@ function CvDeveloper() {
 }
 
 export async function renderCvDeveloper() {
-  return render(<CvDeveloper />, `${basename(import.meta.filename, 'js')}pdf`);
+  console.log('cwd', cwd());
+  return render(<CvDeveloper />, join(cwd(), 'cv-cody-zuschlag-dev.pdf'));
 }

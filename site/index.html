@@ -18,10 +18,12 @@
       {% assign pdf_files = site.static_files | where: "pdf", true %}
       {% for pdf in pdf_files %}
       <!-- <li class="flex"> -->
-      <a class="flex flex-row visited:text-white active:text-white" href=".{{ pdf.path }}">
-        <div class="i-carbon-document-pdf w-8 h-8" />
+      <!-- <a class="flex flex-row visited:text-white active:text-white" href=".{{ pdf.path }}"> -->
+      <div class="flex flex-row">
+        <div class="i-carbon-document-pdf w-8 h-8"></div>
         <div>{{ pdf.name }}</div>
-      </a>
+      </div>
+      <!-- </a> -->
       <!-- </li> -->
       {% endfor %}
     </div>

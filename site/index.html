@@ -18,8 +18,8 @@
       {% assign pdf_files = site.static_files | where: "pdf", true %}
       {% for pdf in pdf_files %}
       <!-- <li class="flex"> -->
-      <a class="visited:text-white active:text-white" href=".{{ pdf.path }}">
-        <div class="flex flex-row justify-center">
+      <a class="visited:text-white active:text-white text-white flex flex-row items-center" href=".{{ pdf.path }}">
+        <div class="flex flex-row items-center">
           <div class="i-carbon-document-pdf w-8 h-8"></div>
           <div>{{ pdf.name }}</div>
         </div>

@@ -12,6 +12,9 @@
   {% for pdf in pdf_files %}
   {{ pdf.path }}
   {% endfor %}
+  {% for pdf in site.static_files %}
+  {{ pdf.path }}
+  {% endfor %}
 </body>
 
 </html>

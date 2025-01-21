@@ -29,5 +29,8 @@
     "react-pdf-tailwind": "^2.3.0",
     "typescript": "^5.7.3",
     "xo": "^0.60.0"
+  },
+  "engines": {
+    "node": ">=23.6.0"
   }
 }

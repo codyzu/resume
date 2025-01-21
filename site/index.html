@@ -10,14 +10,13 @@
 </head>
 
 <body>
-  <h1>Hello World!</h1>
-  {% assign pdf_files = site.static_files | where: "pdf", true %}
-  {% for pdf in pdf_files %}
-  {{ pdf.path }}
-  {% endfor %}
-  {% for pdf in site.static_files %}
-  {{ pdf.path }}
-  {% endfor %}
+  <h1>Resume</h1>
+  <ul>
+    {% assign pdf_files = site.static_files | where: "pdf", true %}
+    {% for pdf in pdf_files %}
+    <li><a href="{{ pdf.path }}">{{ pdf.name }}</a></li>
+    {% endfor %}
+  </ul>
 </body>
 
 </html>

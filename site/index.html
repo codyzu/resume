@@ -8,6 +8,10 @@
 
 <body>
   <h1>Hello World!</h1>
+  {% assign pdf_files = site.static_files | where: "pdf", true %}
+  {% for pdf in pdf_files %}
+  {{ pdf.path }}
+  {% endfor %}
 </body>
 
 </html>

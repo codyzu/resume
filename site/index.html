@@ -12,17 +12,19 @@
 </head>
 
 <body class="bg-black text-white font-sans">
-  <h1>Resume</h1>
-  <div class="bg-gray-7 rounded-xl p-4 flex flex-col items-start">
-    {% assign pdf_files = site.static_files | where: "pdf", true %}
-    {% for pdf in pdf_files %}
-    <!-- <li class="flex"> -->
-    <a class="flex flex-row visited:text-white active:text-white" href=".{{ pdf.path }}">
-      <div class="i-carbon-document-pdf w-8 h-8" />
-      <div>{{ pdf.name }}</div>
-    </a>
-    <!-- </li> -->
-    {% endfor %}
+  <div class="flex flex-col">
+    <h1>Resume</h1>
+    <div class="bg-gray-7 rounded-xl p-4 flex flex-col items-start">
+      {% assign pdf_files = site.static_files | where: "pdf", true %}
+      {% for pdf in pdf_files %}
+      <!-- <li class="flex"> -->
+      <a class="flex flex-row visited:text-white active:text-white" href=".{{ pdf.path }}">
+        <div class="i-carbon-document-pdf w-8 h-8" />
+        <div>{{ pdf.name }}</div>
+      </a>
+      <!-- </li> -->
+      {% endfor %}
+    </div>
   </div>
 </body>
 

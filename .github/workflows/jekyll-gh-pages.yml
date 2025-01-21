@@ -42,6 +42,12 @@ jobs:
       - name: Run
         run: node ../lib/index.js
         working-directory: ./site
+      - name: Install site
+        run: pnpm install
+        working-directory: ./site
+      - name: Build site
+        run: pnpm run build
+        working-directory: ./site
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Build with Jekyll

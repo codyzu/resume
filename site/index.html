@@ -7,14 +7,18 @@
 <head>
   <meta charset="utf-8">
   <title>Home</title>
+  <link href="https://unpkg.com/@csstools/normalize.css" rel="stylesheet" />
+  <link rel="stylesheet" href="uno.css">
 </head>
 
-<body>
+<body class="bg-black text-white font-sans">
   <h1>Resume</h1>
-  <ul>
+  <ul class="bg-gray-7 rounded-xl p-4 flex flex-col">
     {% assign pdf_files = site.static_files | where: "pdf", true %}
     {% for pdf in pdf_files %}
-    <li><a href=".{{ pdf.path }}">{{ pdf.name }}</a></li>
+    <li class="flex flex-row">
+      <div class="i-carbon-document-pdf w-8 h-8" /><a href=".{{ pdf.path }}">{{ pdf.name }}</a>
+    </li>
     {% endfor %}
   </ul>
 </body>

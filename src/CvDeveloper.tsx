@@ -55,7 +55,7 @@ function CvDeveloper() {
         <View style={style('gap-4 w-full')}>
           <Experience version={version} start={3} />
           <Conferences version={version} />
-          <AwardsMemberships />
+          <AwardsMemberships version={version} />
         </View>
       </Page>
     </Document>

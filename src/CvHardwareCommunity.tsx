@@ -14,7 +14,7 @@ import {type Version} from './version.js';
 
 console.log(style('flex-row-reverse items-start text-base'));
 
-const version: Version = 'devrel';
+const version: Version = 'hw';
 
 // Create Document Component
 function CvDeveloperRelations() {
@@ -36,14 +36,13 @@ function CvDeveloperRelations() {
           <View style={style('h-full w-2/3')}>
             <Title version={version} />
             <View
-              style={style(
-                'pl-4 pr-12 pt-1 text-lg gap-4 leading-tight w-full',
-              )}
+              style={style('pl-4 pr-9 pt-1 text-lg gap-1 leading-tight w-full')}
             >
               <Links />
               <Summary version={version} />
               <Education />
               <Conferences version={version} />
+              <AwardsMemberships version={version} />
             </View>
           </View>
         </View>
@@ -54,14 +53,13 @@ function CvDeveloperRelations() {
             <Experience version={version} start={0} end={2} qrCodeSize={100} />
             <Experience version={version} start={2} />
           </View>
-          <AwardsMemberships version={version} />
         </View>
       </Page>
     </Document>
   );
 }
 
-export async function renderCvDeveloperRelations() {
+export async function renderCvHardwareCommunity() {
   return render(
     <CvDeveloperRelations />,
     `${basename(import.meta.filename, 'js')}pdf`,

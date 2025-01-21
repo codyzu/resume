@@ -110,19 +110,61 @@ developerRelationsExperience[0].experiences = [
 ];
 
 developerRelationsExperience[1].experiences = [
-  developerExperience[1].experiences[0],
+  ...developerExperience[1].experiences,
   'International conference speaking.',
   'Video content creation including a series of Fireside Chats with tech leaders.',
   'Performed pre-sales demos and lead generation at events.',
 ];
 
-developerRelationsExperience[2].experiences = [
+developerRelationsExperience[3].experiences = [
   'Developed and taught cutting edge Web Development course teaching 3rd year students how to develop full-stack web applications using JavaScript technologies and deployed to GCP. Ensured alignment with involving industry standards.',
-  ...developerRelationsExperience[2].experiences,
+  ...developerRelationsExperience[3].experiences,
+];
+
+const hwCommunityExperience = [
+  {
+    ...developerRelationsExperience[0],
+    experiences: [
+      ...developerRelationsExperience[0].experiences,
+      'Participated in OSS steering committee and crafted internal policies and programs.',
+      'Customized and automated workflows by integrating systems and creating business insight dashboards.',
+      'Facilitated cross-functional collaboration between engineering, marketing, sales, and talent.',
+    ],
+  },
+  {
+    role: 'Open Source Ambassador, Maintainer, Community Builder',
+    organization: 'FINOS / OpenJS Foundation',
+    location: '',
+    dateRange: '2019-Present',
+    experiences: [
+      'Led contributions to foundational projects like Node.js and a11y-theme-builder, driving accessibility and ecosystem innovation.',
+      'Collaborated with community members to create specifications and technical documentation, fostering global adoption.',
+      'Advocated for diversity and inclusion at events such as Grace Hopper Open Source Day, increasing diverse participation.',
+      'Participated in and organized global events and fostered attendee engagement and interactions',
+    ],
+  },
+  ...structuredClone(developerRelationsExperience.slice(1)),
+];
+
+hwCommunityExperience[2].experiences = [
+  ...hwCommunityExperience[2].experiences,
+  'Partnered with external stakeholders to align community event messaging with strategic goals.',
+  'Managed social media campaigns and technical content to promote open-source projects, increasing online engagement.',
+];
+
+hwCommunityExperience[3].experiences = [
+  ...hwCommunityExperience[3].experiences,
+  'Developed and taught cutting edge Web Development course teaching 3rd year students how to develop full-stack web applications using JavaScript technologies and deployed to GCP. Ensured alignment with involving industry standards.',
+];
+
+hwCommunityExperience.at(-2)!.experiences = [
+  'Developed firmware for robotic laboratory devices, integrating with low level memory mapped I/O devices.',
+  'Developed drivers for Windows CE providing .NET APIs to low-level firmware and secure firmware updates.',
+  'Architected C++ based firmware exposing high level APIs to control robotic components.',
 ];
 
 export const workExperience: Record<Version, WorkExperience[]> = {
   dev: developerExperience,
   devrel: developerRelationsExperience,
-  hw: [],
+  hw: hwCommunityExperience,
 };

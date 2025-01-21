@@ -12,7 +12,8 @@ open-source ecosystems, and delivering technical excellence on
 high-impact projects. Passionate about building innovative,
 user-centric solutions through modern web technologies and
 fostering collaborative, results- oriented engineering
-environments.`,
+environments.
+`,
   devrel: `
 Experienced *Developer Relations Leader* with 17+ years in firmware, software
 engineering, and open-source advocacy. Proven track record in scaling
@@ -20,5 +21,12 @@ developer communities, leading key open-source initiatives (FINOS, OpenJS),
 and delivering high-impact technical content. Passionate about empowering
 developers through public speaking, teaching, and community building.
 `,
-  hw: '',
+  hw: `
+Experienced *Developer Relations Leader* with 17+ years in firmware & software
+engineering, open-source advocacy, community engagement, and technical
+program management. Proven success in driving developer engagement
+through strategic marketing, content creation, event lifecycle management, and
+leading key open-source initiatives (FINOS, OpenJS). Passionate about
+empowering developers through community building, teaching, and innovation.
+`,
 };

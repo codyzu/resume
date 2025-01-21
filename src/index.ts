@@ -1,5 +1,7 @@
 import {renderCvDeveloper} from './CvDeveloper.js';
 import {renderCvDeveloperRelations} from './CvDeveloperRelations.js';
+import {renderCvHardwareCommunity} from './CvHardwareCommunity.js';
 
-renderCvDeveloper();
-renderCvDeveloperRelations();
+void renderCvDeveloper();
+void renderCvDeveloperRelations();
+void renderCvHardwareCommunity();

@@ -69,11 +69,52 @@ const devrelSkills: Array<{category: string; items: string[]}> = [
   },
 ];
 
+export const hwCommunitySkills: Array<{category: string; items: string[]}> = [
+  {
+    category: 'Community',
+    items: [
+      'Engagement',
+      'Relationship Building',
+      'Event Strategy',
+      'Developer Advocacy',
+      'Marketing Technology',
+      'Content Creation',
+      'Performance Analysis',
+      'Reporting',
+      'Branding & Messaging',
+      'Open Source Strategy',
+    ],
+  },
+  {
+    category: 'Leadership',
+    items: [
+      'Team Management',
+      'Technical Program Management',
+      'Workflow Automation',
+      'Technical Leadership & Mentoring',
+    ],
+  },
+  {
+    category: 'Technical',
+    items: [
+      'Firmware Engineering',
+      'Microporocessor Architecture',
+      'Digital Design',
+      'JavaScript (Node.js, React, React Native)',
+      'Modern Web Standards',
+    ],
+  },
+  {
+    category: 'Languages',
+    items: ['English (native)', 'French (fluent)'],
+  },
+];
+
 export const skills: Record<
   Version,
   Array<{category: string; items: string[]}>
 > = {
   dev: developerSkills,
   devrel: devrelSkills,
-  hw: [],
+  hw: hwCommunitySkills,
 };

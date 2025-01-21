@@ -11,5 +11,9 @@ export const keyWords: Record<Version, string[]> = {
     'Open Source Advocate',
     'International Public Speaker',
   ],
-  hw: [],
+  hw: [
+    'Developer Relations Leader',
+    'Community Marketing Expert',
+    'Technical Program Manager',
+  ],
 };

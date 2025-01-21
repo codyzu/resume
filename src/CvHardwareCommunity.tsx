@@ -1,5 +1,5 @@
 import path, {basename, join} from 'node:path';
-import { cwd } from 'node:process';
+import {cwd} from 'node:process';
 import {Page, View, Document, render, Link} from '@react-pdf/renderer';
 import {style} from './utils/style.js';
 import {packageDirectory} from './utils/package-dir.js';
@@ -63,6 +63,6 @@ function CvDeveloperRelations() {
 export async function renderCvHardwareCommunity() {
   return render(
     <CvDeveloperRelations />,
-    join(cwd(), 'cv-cody-zuschlag-dev.pdf'),
+    join(cwd(), 'cv-cody-zuschlag-community.pdf'),
   );
 }

@@ -32,7 +32,7 @@ const developmentConferences: Array<{header: string; items: ListItem[]}> = [
     items: [
       {
         header: 'NodeConf EU (2022, 2023)',
-        text: '"Your First Node.js Contribution" Workshop: Empowered attendees to make their initial contributions to Node.js, demystifying the process; "From Zero to React Native": Provided hands-on guidance for transitioning to mobile app development with React Native.',
+        text: '“Your First Node.js Contribution” Workshop: Empowered attendees to make their initial contributions to Node.js, demystifying the process; “From Zero to React Native”: Provided hands-on guidance for transitioning to mobile app development with React Native.',
       },
     ],
   },
@@ -115,7 +115,7 @@ const devrelConferences: Array<{header: string; items: ListItem[]}> = [
     items: [
       {
         header: 'NodeConf EU (2022, 2023)',
-        text: '"Your First Node.js Contribution" Workshop: Empowered attendees to make their initial contributions to Node.js, demystifying the process; "From Zero to React Native": Provided hands-on guidance for transitioning to mobile app development with React Native.',
+        text: '“Your First Node.js Contribution” Workshop: Empowered attendees to make their initial contributions to Node.js, demystifying the process; “From Zero to React Native”: Provided hands-on guidance for transitioning to mobile app development with React Native.',
       },
     ],
   },

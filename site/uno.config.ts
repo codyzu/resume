@@ -26,7 +26,7 @@ export default defineConfig({
       // Prefer bunny provider, but it seems to be broken with 2 theme overrides (only loads the first)
       provider: 'google',
       fonts: {
-        mono: ['Noto Sans Mono'],
+        // Mono: ['Noto Sans Mono'],
         sans: [
           {
             name: 'Nunito',
@@ -37,14 +37,6 @@ export default defineConfig({
     }),
   ],
   transformers: [transformerDirectives(), transformerVariantGroup()],
-  shortcuts: {
-    panel:
-      'bg-gray-8 rounded gap-2 p-2 bg-gradient-to-b bg-gradient-stops-[black,rgb(31_41_55_/_0)_3.5rem,rgb(31_41_55_/_0)_4rem_100%]',
-    section: 'gap-2',
-    button:
-      'px-2 py-1 bg-gray-7 rounded gap-2 flex flex-row items-center justify-center border-1 border-white text-sm focus:bg-blue-8 active:bg-black focus:outline-none',
-    'icon-button': 'w-4 h-4',
-  },
 });
 
 type CliEntryItem = {

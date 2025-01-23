@@ -17,17 +17,22 @@ export default function Title({version}: {readonly version: Version}) {
             Cody Zuschlag
           </Text>
           <Link
-            style={style(
-              'text-xl text-white no-underline font-roboto font-bold',
-            )}
+            style={style('text-xl text-white underline font-roboto font-bold')}
+            src="https://devrel.codyfactory.eu"
           >
             https://devrel.codyfactory.eu
           </Link>
         </View>
-        <Image
-          src={path.join(packageDirectory, 'images', 'devrel-codyfactory.png')}
-          style={style('w-[68px] h-[68px] my-1')}
-        />
+        <Link src="https://devrel.codyfactory.eu">
+          <Image
+            src={path.join(
+              packageDirectory,
+              'images',
+              'devrel-codyfactory.png',
+            )}
+            style={style('w-[68px] h-[68px] my-1')}
+          />
+        </Link>
       </View>
       <Text style={style('text-lg font-roboto font-bold')}>
         {keyWords[version].join(' | ')}

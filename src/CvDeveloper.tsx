@@ -30,7 +30,7 @@ function CvDeveloper() {
           >
             <Sidebar
               version={version}
-              imagePath={`${path.join(packageDirectory, 'images', 'profile.png')}`}
+              imagePath={`${path.join(packageDirectory, 'images', 'profile-compressed.png')}`}
             />
           </View>
 

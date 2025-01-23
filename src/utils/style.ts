@@ -7,19 +7,9 @@ import {packageDirectory} from './package-dir.js';
 Font.register({
   family: 'Roboto',
   fonts: [
-    {src: join(packageDirectory, 'fonts', 'roboto-mono-regular.ttf')},
+    {src: join(packageDirectory, 'fonts', 'roboto-regular.ttf')},
     {
-      src: join(packageDirectory, 'fonts', 'roboto-mono-bold.ttf'),
-      fontWeight: 'bold',
-    },
-  ],
-});
-Font.register({
-  family: 'Roboto Semicondensed',
-  fonts: [
-    {src: join(packageDirectory, 'fonts', 'roboto-semicondensed-regular.ttf')},
-    {
-      src: join(packageDirectory, 'fonts', 'roboto-semicondensed-bold.ttf'),
+      src: join(packageDirectory, 'fonts', 'roboto-bold.ttf'),
       fontWeight: 'bold',
     },
   ],
@@ -70,7 +60,7 @@ export const twStyles = createTw({
     fontFamily: {
       sans: ['Lato'],
       mono: ['Fira Code'],
-      roboto: ['Roboto Semicondensed'],
+      roboto: ['Roboto'],
       fira: ['Fira Sans'],
     },
     extend: {

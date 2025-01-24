@@ -8,7 +8,7 @@ Over-engineered? Probably... but I've rewritten my resume using several differen
 
 Multiply all of that over wanting multiple versions targeting different types of roles and I found myself spending hours making small tweaks and then porting those tweaks to all versions of my resume.
 
-Laying in bed one night, wishing my resume worked more like code, providing composition and the history of source control, I had an idea... why not just write it in code and use react-pdf to format it?
+Laying in bed one night, wishing my resume worked more like code, providing composition and the history of source control, I had an idea... why not just write it in code and use react-pdf to render it to pdf?
 
 ### The stack
 - ~~Node.js >=23.6.0 so I can write directly in TypeScript.~~ Turns out [jsx is not supported by node.js](https://nodejs.org/docs/latest-v23.x/api/typescript.html#determining-module-system), so we are still transpiling in order to use react + jsx. 

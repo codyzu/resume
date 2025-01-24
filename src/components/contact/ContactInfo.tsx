@@ -1,10 +1,5 @@
 import {View} from '@react-pdf/renderer';
-import {
-  Component,
-  type ComponentType,
-  JSX,
-  type PropsWithChildren,
-} from 'react';
+import {type ComponentType, type PropsWithChildren} from 'react';
 import {type Style} from '@react-pdf/types';
 import {style} from '../../utils/style.js';
 

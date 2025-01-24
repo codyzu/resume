@@ -1,6 +1,6 @@
-import path, {basename, join} from 'node:path';
+import {join} from 'node:path';
 import {cwd} from 'node:process';
-import {Page, View, Document, render, Link} from '@react-pdf/renderer';
+import {Page, View, Document, render} from '@react-pdf/renderer';
 import {style} from './utils/style.js';
 import {packageDirectory} from './utils/package-dir.js';
 import Education from './components/sections/Education.js';
@@ -29,7 +29,7 @@ function CvDeveloperRelations() {
           >
             <Sidebar
               version={version}
-              imagePath={`${path.join(packageDirectory, 'images', 'profile-compressed.png')}`}
+              imagePath={`${join(packageDirectory, 'images', 'profile-compressed.png')}`}
             />
           </View>
 

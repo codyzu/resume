@@ -11,7 +11,7 @@ Multiply all of that over wanting multiple versions targeting different types of
 Laying in bed one night, wishing my resume worked more like code, providing composition and the history of source control, I had an idea... why not just write it in code and use react-pdf to format it?
 
 ### The stack
-- Node.js >=23.6.0 so I can write directly in TypeScript.
+- ~~Node.js >=23.6.0 so I can write directly in TypeScript.~~ Turns out [jsx is not supported by node.js](https://nodejs.org/docs/latest-v23.x/api/typescript.html#determining-module-system), so we are still transpiling in order to use react + jsx. 
 - Typescript to facilitate refactoring when I need to make those pesky tweaks.
 - react-pdf because at the end of the day, I want a pdf.
 - react because this is all about the view and I want the flexibility of components.

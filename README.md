@@ -13,10 +13,10 @@ Laying in bed one night, wishing my resume worked more like code, providing comp
 ### The stack
 - ~~Node.js >=23.6.0 so I can write directly in TypeScript.~~ Turns out [tsx is not supported by node.js](https://nodejs.org/docs/latest-v23.x/api/typescript.html#determining-module-system), so we are still transpiling in order to use ts + react. 
 - Typescript to facilitate refactoring when I need to make those pesky tweaks.
-- react-pdf because at the end of the day, I want a pdf.
+- [react-pdf](https://react-pdf.org/) because at the end of the day, I want a pdf.
 - react because this is all about the view and I want the flexibility of components.
-- react-pdf-tailwind because "css" (or similar in the case of react-pdf) is hard. Atomic css classes provides the right level of abstraction and control.
-- xo.js because it's super strict and plug-n-play
+- [react-pdf-tailwind](https://github.com/aanckar/react-pdf-tailwind) because "css" (or similar in the case of react-pdf) is hard. Atomic css classes provides the right level of abstraction and control.
+- [xo.js](https://github.com/xojs/xo) because it's super strict and plug-n-play
 
 ### The result
 I know have a resume written entirely in code and composed of react components.

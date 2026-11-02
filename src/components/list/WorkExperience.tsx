@@ -1,12 +1,5 @@
+import {type WorkExperience} from '../../data/types.js';
 import List, {type List as ListType} from './List.js';
-
-export type WorkExperience = {
-  readonly role: string;
-  readonly dateRange: string;
-  readonly organization: string;
-  readonly location: string;
-  experiences: string[];
-};
 
 export default function WorkExperienceComponent({
   experience,

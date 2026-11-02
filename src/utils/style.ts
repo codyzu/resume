@@ -77,6 +77,6 @@ export const twStyles = createTw({
   },
 });
 
-export function style(...classNames: any[]): Style {
+export function style(...classNames: Array<string | false | undefined>): Style {
   return twStyles(classNames.filter(Boolean).join(' '));
 }

@@ -1,0 +1,25 @@
+version = 1
+name = "CV Cody Zuschlag"
+
+[setup]
+script = "pnpm run setup"
+
+[[actions]]
+name = "Check"
+icon = "test"
+command = "pnpm check"
+
+[[actions]]
+name = "Render"
+icon = "run"
+command = "pnpm render"
+
+[[actions]]
+name = "Preview"
+icon = "run"
+command = "pnpm render && pnpm preview"
+
+[[actions]]
+name = "Site"
+icon = "run"
+command = "pnpm build:site && pnpm serve"

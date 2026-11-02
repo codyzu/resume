@@ -5,11 +5,19 @@
   "type": "module",
   "main": "lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
-    "start": "pnpm run build && node lib/index.js",
-    "dev": "nodemon --ignore lib --ignore \"*.pdf\" --watch src --ext tsx,ts --exec pnpm run start",
-    "lint": "xo"
+    "typecheck": "tsc --noEmit",
+    "render": "pnpm build && node lib/index.js",
+    "start": "pnpm render",
+    "dev": "nodemon --watch src --ext tsx,ts --exec pnpm render",
+    "lint": "xo",
+    "test": "pnpm build && pnpm --dir site build && node --test tests/*.test.mjs",
+    "check": "pnpm typecheck && pnpm lint && pnpm test && pnpm render && pnpm check:pdf && pnpm build:site",
+    "check:pdf": "python3 scripts/check-pdfs.py",
+    "preview": "python3 scripts/check-pdfs.py --preview",
+    "build:site": "pnpm build && pnpm --dir site build && node lib/build-site.js",
+    "serve": "python3 -m http.server 4173 --bind 127.0.0.1 --directory output/site",
+    "setup": "node scripts/setup.mjs"
   },
   "keywords": [],
   "author": "",
@@ -17,20 +25,22 @@
   "dependencies": {
     "@react-pdf/renderer": "^4.1.6",
     "@react-pdf/types": "^2.7.0",
+    "pkg-dir": "^8.0.0",
+    "react": "^19.0.0",
+    "react-pdf-tailwind": "^2.3.0"
+  },
+  "engines": {
+    "node": "24.x"
+  },
+  "packageManager": "pnpm@9.15.4+sha512.b2dc20e2fc72b3e18848459b37359a32064663e5627a51e4c74b2c29dd8e8e0491483c3abb40789cfd578bf362fb6ba8261b05f0387d76792ed6e23ea3b1b6a0",
+  "devDependencies": {
     "@types/node": "^22.10.6",
     "@types/react": "^19.0.7",
     "eslint-config-xo-react": "^0.27.0",
     "eslint-plugin-react": "^7.37.4",
     "eslint-plugin-react-hooks": "^5.1.0",
     "nodemon": "^3.1.9",
-    "pkg-dir": "^8.0.0",
-    "react": "^19.0.0",
-    "react-pdf-tailwind": "^2.3.0",
     "typescript": "^5.7.3",
     "xo": "^0.60.0"
-  },
-  "engines": {
-    "node": ">=23.6.0"
-  },
-  "packageManager": "pnpm@9.15.4+sha512.b2dc20e2fc72b3e18848459b37359a32064663e5627a51e4c74b2c29dd8e8e0491483c3abb40789cfd578bf362fb6ba8261b05f0387d76792ed6e23ea3b1b6a0"
+  }
 }

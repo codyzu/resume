@@ -4,14 +4,16 @@ import {presetIcons} from '@unocss/preset-icons';
 import {presetTypography} from '@unocss/preset-typography';
 import transformerVariantGroup from '@unocss/transformer-variant-group';
 import transformerDirectives from '@unocss/transformer-directives';
-import {presetWebFonts} from '@unocss/preset-web-fonts';
 
 export default defineConfig({
+  theme: {fontFamily: {sans: 'system-ui, sans-serif'}},
+  preflights: [{getCSS: () => '*,::before,::after{box-sizing:border-box}body{margin:0}a:focus-visible{outline:2px solid white;outline-offset:4px}'}],
+  safelist: ['text-white', 'flex', 'flex-row', 'items-center', 'gap-2', 'i-carbon-document-pdf', 'w-8', 'h-8'],
   cli: {
     entry: {
       patterns: ['*.html'],
-      outFile: 'uno.css',
-    }, // CliEntryItem | CliEntryItem[]
+      outFile: '../output/css/uno.css',
+    },
   },
   presets: [
     presetUno(),
@@ -22,30 +24,7 @@ export default defineConfig({
       },
     }),
     presetTypography(),
-    presetWebFonts({
-      // Prefer bunny provider, but it seems to be broken with 2 theme overrides (only loads the first)
-      provider: 'google',
-      fonts: {
-        // Mono: ['Noto Sans Mono'],
-        sans: [
-          {
-            name: 'Nunito',
-            weights: ['400', '600', '800'],
-          },
-        ],
-      },
-    }),
+
   ],
   transformers: [transformerDirectives(), transformerVariantGroup()],
 });
-
-type CliEntryItem = {
-  /**
-   * Glob patterns to match files
-   */
-  patterns: string[];
-  /**
-   * The output filename for the generated UnoCSS file
-   */
-  outFile: string;
-};

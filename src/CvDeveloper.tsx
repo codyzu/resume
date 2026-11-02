@@ -1,5 +1,4 @@
 import {join} from 'node:path';
-import {cwd} from 'node:process';
 import {Page, View, Document, render} from '@react-pdf/renderer';
 import {style} from './utils/style.js';
 import {packageDirectory} from './utils/package-dir.js';
@@ -13,8 +12,6 @@ import Sidebar from './components/sections/Sidebar.js';
 import Experience from './components/sections/Experience.js';
 import Links from './components/sections/Links.js';
 import {type Version} from './version.js';
-
-console.log(style('flex-row-reverse items-start text-base'));
 
 const version: Version = 'dev';
 
@@ -46,15 +43,25 @@ function CvDeveloper() {
               <Summary version={version} />
               <Education />
               <TechnicalProjects />
-              <Experience version={version} start={0} end={1} />
-              <Experience version={version} start={1} end={3} />
+              <Experience
+                isHeaderVisible
+                version={version}
+                ids={['nearform-community']}
+              />
+              <Experience
+                version={version}
+                ids={['nearform-devrel', 'nearform-engineering']}
+              />
             </View>
           </View>
         </View>
       </Page>
       <Page wrap size="A4" style={style('font-sans p-16')}>
         <View style={style('gap-4 w-full')}>
-          <Experience version={version} start={3} />
+          <Experience
+            version={version}
+            ids={['teaching', 'hubware', 'axway', 'beautec', 'hamilton', 'igt']}
+          />
           <Conferences version={version} />
           <AwardsMemberships version={version} />
         </View>
@@ -63,7 +70,6 @@ function CvDeveloper() {
   );
 }
 
-export async function renderCvDeveloper() {
-  console.log('cwd', cwd());
-  return render(<CvDeveloper />, join(cwd(), 'cv-cody-zuschlag-dev.pdf'));
+export async function renderCvDeveloper(outputPath: string) {
+  return render(<CvDeveloper />, outputPath);
 }

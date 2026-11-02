@@ -1,6 +1,0 @@
-defaults:
-  -
-    scope:
-      path: "*.pdf"
-    values:
-      pdf: true

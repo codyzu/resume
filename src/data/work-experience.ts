@@ -28,18 +28,18 @@ export const supportingExperience = {
 };
 
 const cernIt = [
-  select('xen', ['community', 'website', 'ci-testing']),
+  select('xen', ['website-delivery', 'ci-testing', 'community']),
   select('nearform', [
-    'progression',
-    'cms',
-    'authorization',
+    'role-progression',
+    'authorization-leadership',
+    'cms-engineering',
     'architecture-reviews',
-    'design-system',
+    'engineering-mentorship',
   ]),
   select('hubware', [
-    'team-leadership',
+    'engineering-leadership',
     'production-support',
-    'cloud-architecture',
+    'distributed-services',
   ]),
   select('axway', ['java-osgi', 'performance-metrics', 'api-builder']),
   select('beautec', ['integration', 'interfaces']),
@@ -47,20 +47,25 @@ const cernIt = [
   select('igt', ['usb-firmware']),
 ];
 const cernControl = [
-  select('xen', ['community', 'embedded-demo', 'website', 'ci-testing']),
-  select('nearform', [
-    'progression',
-    'authorization',
-    'architecture-reviews',
-    'mentoring',
+  select('xen', [
+    'embedded-demo',
+    'ci-testing',
+    'website-delivery',
+    'community',
   ]),
-  select('hubware', ['team-leadership', 'production-support']),
+  select('nearform', [
+    'role-progression',
+    'authorization-leadership',
+    'architecture-reviews',
+    'engineering-mentorship',
+  ]),
+  select('hubware', ['engineering-leadership', 'production-support']),
   select('axway', ['java-osgi', 'performance-metrics', 'api-builder']),
   select('beautec', ['integration', 'interfaces']),
   select('hamilton', [
     'firmware-and-drivers',
     'driver-interop',
-    'quality-process',
+    'requirements-validation',
   ]),
   select('igt', ['usb-firmware']),
 ];

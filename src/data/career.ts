@@ -44,6 +44,8 @@ export const career = {
         'Manage stakeholder engagement, meetings, budgets and conferences for the international Xen Project community.',
       website:
         'Migrated the website from Hugo/Sass to Astro/UnoCSS, maintaining deployment continuity; Hugo removed, visual redesign ongoing.',
+      'website-delivery':
+        'Migrated the Xen Project website from Hugo/Sass to Astro/UnoCSS while maintaining deployment continuity.',
       'ci-testing':
         'Substantially reworked existing GitLab CI/CD; added Playwright content, ARIA snapshot, visual regression and accessibility checks.',
       'embedded-demo':
@@ -61,6 +63,14 @@ export const career = {
       ...nearformEngineering,
       progression:
         'Senior Software Engineer (2019-22); Developer Relations Engineer, then Staff (2022-24); Community Lead (May-Dec 2024). Technical lead assignment in 2024.',
+      'role-progression':
+        'Senior Software Engineer (2019-22); Developer Relations Engineer, then Staff (2022-24); Community Lead (May-Dec 2024).',
+      'cms-engineering':
+        "Developed React/Gatsby components and tooling for EFQM's Orion CMS; integrated Hasura/GraphQL with PostgreSQL schema design, SQL and migrations.",
+      'authorization-leadership':
+        'Led the ghSMART authorization proof of concept (2024) and integrated OpenFGA permissions with Auth0 authentication in an Azure application under development.',
+      'engineering-mentorship':
+        'Mentored engineers, delivered technical workshops and coordinated open-source initiatives across teams.',
       authorization:
         'Technical lead assignment, ghSMART (2024): supervised authorization proof of concept and personally integrated OpenFGA permissions alongside Auth0 authentication in an Azure application still in development.',
       mentoring:
@@ -75,10 +85,14 @@ export const career = {
     contributions: {
       'team-leadership':
         'Technical lead in a five-developer team; built Node.js services in Docker and deployed applications on Google Kubernetes Engine.',
+      'engineering-leadership':
+        'Led technical delivery in a five-developer team; developed Node.js services in Docker and deployed applications on Google Kubernetes Engine.',
       'production-support':
         'Troubleshot restarting pods and slow database requests; supported live applications, including urgent after-hours issues, and helped establish CI for blue/green testing.',
       'cloud-architecture':
         'Built with managed PostgreSQL, Cloud Functions, Pub/Sub and Firestore; deployed applications on GKE.',
+      'distributed-services':
+        'Developed cloud applications using managed PostgreSQL, Cloud Functions, Pub/Sub and Firestore.',
     },
   },
   axway: {
@@ -121,6 +135,8 @@ export const career = {
         'Exposed low-level operations to C# through interop/marshalling; implemented connected-device firmware updates and boot-related code.',
       'quality-process':
         'Contributed requirements, design and validation documentation; ensured own work followed ISO 9001 processes.',
+      'requirements-validation':
+        'Contributed requirements, design and validation documentation within ISO 9001 processes.',
       'robotics-api':
         'Implemented C# APIs for low-level device operations and firmware updates for connected devices.',
       'hardware-interfaces':

@@ -50,9 +50,10 @@ delivery, developer relations, and hardware/open-source community work. See
 ## Boundaries and unresolved details
 
 The applicant confirmed Java/C++ need a refresher after substantial earlier use.
-The CV dates and skill descriptions distinguish this from recent web work;
-they do not assert current Java/C++ fluency. C#/.NET is identified as earlier
-substantial integration work, and Python is represented by concrete uses.
+The employment dates distinguish this from recent web work; the CVs do not
+assert current Java/C++ fluency or recent full-time C++ development. C#/.NET
+integration is prominent in the IT profile, with its professional context dated
+in the career history. Python is represented by concrete uses.
 
 No Microsoft 365, Exchange, Entra/AD administration, accelerator protection,
 interlocks or safety certification is claimed. Cluster/server administration is
@@ -102,3 +103,52 @@ and deployment. Source and review artifacts are accessible to repository viewers
 The existing all-variant CI workflow is retained. The user subsequently
 authorized committing, merging into main and pushing main, including the
 normal website deployment of the three general CVs.
+
+## Submission refinement — 2 November 2026
+
+Re-read both live CERN vacancy pages linked above. The IT selection prioritizes
+application development, service operation and troubleshooting, integration,
+automation, observability and technical ownership. The control selection
+prioritizes Java/C++ engineering, equipment interfaces, lifecycle discipline,
+requirements, testing/CI, operational diagnosis and mentoring.
+
+The final refinement uses the existing career evidence and the applicant's
+explicit confirmation of engineering team leadership, architectural decisions
+and mentoring. Headlines and summaries establish nearly 20 years of engineering
+and technical leadership before the current community title. IT emphasizes
+C#/.NET, SQL and industrial enterprise integration alongside distributed cloud
+applications and production support. Control names Hamilton firmware and drivers
+in the opening and foregrounds validation discipline. Xen's technical projects
+lead each entry; its embedded demonstration remains explicitly identified as a
+2025 demo. Nearform's authorization work retains proof-of-concept/development
+status and the distinction between Auth0 authentication and OpenFGA authorization.
+
+New named contribution selections in `career.ts` make the CERN emphasis explicit
+without changing public CV copy. No layout, photo, fonts, page composition or
+publication allowlist changes were needed. No new quantitative achievements,
+technology experience or credentials were added. No new factual claim requires
+applicant confirmation; the unresolved details listed above remain omitted.
+
+Final validation: Node 24.16.0 / pnpm 9.15.4; `pnpm check` passed type checking,
+lint, all six integration tests, all five two-page A4 renders, PDF checks and
+public-site staging. `pnpm preview` passed. Both pages of each final CERN PDF
+were visually inspected after the last copy changes: no clipping, overlap,
+stranded headings or awkward heading wraps; readable body text and balanced
+margins. Portrait, blue header, dark sidebar and typography remain unchanged.
+
+The 10-second review identifies senior engineering in each headline; nearly
+20 years, technical breadth and team/architecture/mentoring experience in each
+summary; C#/.NET and enterprise integration immediately in IT's sidebar; Hamilton
+C/C++/ARM and validation immediately in control's opening. Technical Xen bullets
+lead before routine community responsibilities.
+
+Poppler extraction retains all career content and section order. Automatic
+two-column extraction can place sidebar content between main-column blocks;
+no claim of universal ATS reading order is made. Both final PDFs contain five
+clickable annotation targets: email, phone, portfolio, GitHub and LinkedIn.
+Targets match the displayed contact information. GitHub and portfolio were
+retrieved; LinkedIn's target matches the profile linked from GitHub, but its
+live profile content could not be independently retrieved through automated
+access (challenge/cache failure). Email and phone targets were inspected
+without sending a message or placing a call. No submission or publication was
+performed during this refinement.

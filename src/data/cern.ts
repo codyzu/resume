@@ -5,21 +5,21 @@ import {type CareerId} from './career.js';
 export const cernProfiles = {
   'cern-it': {
     reference: 'IT-CA-CET-2026-210-LD',
-    title: 'Software Engineer | Integration & Service Reliability',
+    title: 'Senior Software Engineer & Technical Leader',
     summary:
-      'Software engineer and technical leader with engineering experience spanning firmware, enterprise integration and cloud applications since 2007. Hands-on work includes PostgreSQL, React/Node.js, Kubernetes application deployment, automation and observability. Combines hands-on delivery with technical leadership and international collaboration; developer-relations and community roles since 2022 include recent website engineering.',
+      'Nearly 20 years engineering complex systems, from embedded firmware to enterprise integration and distributed cloud applications. Combines C#/.NET and SQL integration, Node.js services and Kubernetes delivery with production troubleshooting, automation and observability. Led engineering teams, shaped architecture and mentored developers. Brings hands-on implementation and operational judgment to reliable services, backed by international engineering and open-source collaboration.',
     skills: [
       [
-        'Applications & data',
-        'TypeScript, JavaScript, Node.js, React, GraphQL; PostgreSQL schema design, SQL, migrations and integration.',
+        'Enterprise integration',
+        'C#, ASP.NET, ADO.NET; SQL Server, Oracle PL/SQL; SAP, OPC, OSIsoft PI. PostgreSQL schema design, SQL and migrations.',
       ],
       [
         'Delivery & operations',
-        'Docker, Kubernetes application deployment, GCP, GitLab CI/CD, Playwright; production troubleshooting, InfluxDB/Grafana.',
+        'Docker, Kubernetes application deployment, GCP, GitLab CI/CD, Playwright; production troubleshooting, Python performance tests, InfluxDB/Grafana, capacity planning.',
       ],
       [
-        'Earlier foundations',
-        'Substantial C#/.NET enterprise integration at BeauTec (2011-13); Java/OSGi at Axway (2013-17). Python performance tests, scripts and sensor APIs.',
+        'Software & design',
+        'Node.js, TypeScript, JavaScript, React, GraphQL; architecture reviews, Auth0 authentication, OpenFGA authorization, technical leadership and mentoring.',
       ],
     ],
     pages: [
@@ -29,21 +29,21 @@ export const cernProfiles = {
   },
   'cern-control': {
     reference: 'TE-MPE-CB-2026-213-LD',
-    title: 'Software Engineer | Hardware Interfaces & Testing',
+    title: 'Senior Software Engineer | Embedded Systems & Reliability',
     summary:
-      'Software engineer and technical leader with earlier C/C++ firmware, drivers and hardware-interface development, followed by Java/OSGi and web application engineering. Brings requirements and validation documentation, automated testing, deployment troubleshooting and mentoring. Recent work includes an embedded Xen demonstration and website CI/testing, alongside a principal community-management role.',
+      'Nearly 20 years of software engineering spanning embedded systems, enterprise integration and cloud services. Developed ARM firmware, C/C++ hardware interfaces and Windows CE drivers for Hamilton laboratory equipment. Combines requirements, design and validation discipline with Java/OSGi, automated testing and production troubleshooting. Led engineering teams, shaped architecture and mentored developers; brings systems depth and engineering judgment across hardware, software and operations.',
     skills: [
       [
-        'Systems foundations',
-        'C/C++ ARM firmware, Windows CE drivers, C# interop (Hamilton, 2009-11); Java/OSGi (Axway, 2013-17). Substantial earlier roles; recent development centers on web applications and integration.',
+        'Systems & interfaces',
+        'C/C++, ARM firmware, Windows CE drivers, boot-related code, C# interop; Java/OSGi. Hardware interfaces and firmware updates for laboratory devices.',
       ],
       [
-        'Recent technical work',
-        'TypeScript/JavaScript, Astro, React, Node.js; Playwright and GitLab CI/CD. Xen demo integration using Yocto, Zephyr and a Python sensor API (2025).',
+        'Engineering discipline',
+        'Requirements, design and validation documentation; ISO 9001 processes, automated testing, GitLab CI/CD, Python performance tests, observability and production troubleshooting.',
       ],
       [
-        'Engineering practice',
-        'Requirements, design and validation documentation; version control, CI, performance testing, observability, live application support and technical mentoring.',
+        'Technical leadership',
+        'Xen demo (2025): Raspberry Pi, Yocto, Zephyr, Python API. Node.js, TypeScript; team leadership, architecture reviews and mentoring.',
       ],
     ],
     pages: [

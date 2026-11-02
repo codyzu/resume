@@ -97,6 +97,7 @@ function Sidebar({version}: {readonly version: Version}) {
     color: 'white',
     textDecoration: 'none' as const,
   };
+  const onlineLinkStyle = {...linkStyle, paddingVertical: 4};
   return (
     <View
       style={{
@@ -162,15 +163,18 @@ function Sidebar({version}: {readonly version: Version}) {
           Online
         </SectionHeader>
       </View>
-      <View style={{gap: 8}}>
-        <Link src="https://devrel.codyfactory.eu" style={linkStyle}>
+      <View>
+        <Link src="https://devrel.codyfactory.eu" style={onlineLinkStyle}>
           Portfolio & technical talks
         </Link>
-        <Link src="https://github.com/codyzu" style={linkStyle}>
+        <Link src="https://github.com/codyzu" style={onlineLinkStyle}>
           github.com/codyzu
         </Link>
-        <Link src="https://linkedin.com/in/cody-zuschlag" style={linkStyle}>
-          LinkedIn / cody-zuschlag
+        <Link
+          src="https://linkedin.com/in/cody-zuschlag"
+          style={onlineLinkStyle}
+        >
+          linkedin.com/in/cody-zuschlag
         </Link>
       </View>
     </View>

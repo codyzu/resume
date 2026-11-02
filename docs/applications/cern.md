@@ -152,3 +152,11 @@ live profile content could not be independently retrieved through automated
 access (challenge/cache failure). Email and phone targets were inspected
 without sending a message or placing a call. No submission or publication was
 performed during this refinement.
+
+Sidebar link follow-up: changed the shared LinkedIn label to
+`linkedin.com/in/cody-zuschlag` to match GitHub's URL style. Replaced gaps between
+online links with vertical padding, increasing each CERN link annotation's
+height from 11.4pt to 19.4pt. Verified the embedded targets and visually inspected
+all ten regenerated pages; `pnpm check` and `pnpm preview` pass. iPad Preview
+interaction has not been tested on a device; the larger targets are a usability
+improvement, not a verified fix for the reported viewer behavior.

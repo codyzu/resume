@@ -1,8 +1,9 @@
 {
   "compilerOptions": {
-    "target": "ES2023",
+    "target": "ES2024",
     "module": "NodeNext",
     "jsx": "react-jsx",
+    "types": ["node", "react"],
     "rootDir": "src",
     "outDir": "lib",
     "strict": true,

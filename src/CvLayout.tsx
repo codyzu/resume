@@ -33,7 +33,10 @@ function Jobs({
 }) {
   return ids.map((id) => {
     const job = workExperience[version].find((entry) => entry.id === id);
-    if (!job) throw new Error(`Missing career entry ${version}/${id}`);
+    if (!job) {
+      throw new Error(`Missing career entry ${version}/${id}`);
+    }
+
     return (
       <View key={id} wrap={false} style={{marginBottom: 8}}>
         <Text style={{fontWeight: 'heavy', fontSize: compact ? 10.5 : 11.5}}>

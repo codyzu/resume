@@ -15,7 +15,10 @@ function select<Id extends CareerId>(
     dateRange: job.dateRange,
     experiences: contributions.map((key) => {
       const text = (job.contributions as Record<string, string>)[String(key)];
-      if (!text) throw new Error(`Unknown contribution ${id}/${String(key)}`);
+      if (!text) {
+        throw new Error(`Unknown contribution ${id}/${String(key)}`);
+      }
+
       return text;
     }),
   };

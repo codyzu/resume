@@ -26,7 +26,7 @@ export default function SectionHeader({
       <Text
         style={{
           ...style('text-2xl font-mono font-bold'),
-          ...(fontSize === undefined ? {} : {fontSize}),
+          ...(fontSize !== undefined && {fontSize}),
         }}
       >
         {children}

@@ -20,11 +20,13 @@ for (const version of publicVersions) {
 }
 
 const template = await readFile(join(source, 'index.html'), 'utf8');
-if (!template.includes('<!-- downloads -->'))
+if (!template.includes('<!-- downloads -->')) {
   throw new Error('Missing download-list placeholder');
+}
+
 await writeFile(
   join(destination, 'index.html'),
-  template.replace('<!-- downloads -->', links.join('\n')),
+  template.replace('<!-- downloads -->', () => links.join('\n')),
 );
 await Promise.all([
   copyFile(

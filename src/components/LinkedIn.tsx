@@ -19,7 +19,7 @@ export default function LinkedIn({qrCodeSize}: {readonly qrCodeSize?: number}) {
       <Link src="https://linkedin.com/in/cody-zuschlag">
         <Image
           style={style(`w-[${qrCodeSize ?? 70}px] h-[${qrCodeSize ?? 70}px]`)}
-          src={`${path.join(packageDirectory, 'images', 'linked-in.png')}`}
+          src={path.join(packageDirectory, 'images', 'linked-in.png')}
         />
       </Link>
     </View>

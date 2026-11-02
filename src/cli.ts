@@ -13,17 +13,24 @@ export function parseArguments(arguments_: string[]) {
     switch (argument) {
       case '--variant': {
         const value = arguments_[++index];
-        if (!value || !isVersion(value))
+        if (!value || !isVersion(value)) {
           throw new Error(`Unknown or missing variant: ${value ?? ''}`);
+        }
+
         versions ??= [];
-        if (!versions.includes(value)) versions.push(value);
+        if (!versions.includes(value)) {
+          versions.push(value);
+        }
+
         break;
       }
 
       case '--out-dir': {
         const value = arguments_[++index];
-        if (!value || value.startsWith('--'))
+        if (!value || value.startsWith('--')) {
           throw new Error('--out-dir requires a directory');
+        }
+
         outputDirectory = resolve(value);
         break;
       }

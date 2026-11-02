@@ -9,8 +9,8 @@ export default function WorkExperienceComponent({
   const experienceTitle = `${experience.role.toLocaleUpperCase()} | ${experience.organization} (${experience.location}) | ${experience.dateRange}`;
   const experienceList: ListType = {
     header: experienceTitle,
-    items: experience.experiences.map((experience) => ({
-      text: experience,
+    items: experience.experiences.map((contribution) => ({
+      text: contribution,
     })),
   };
 

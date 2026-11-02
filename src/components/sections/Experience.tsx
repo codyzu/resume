@@ -20,7 +20,10 @@ export default function Experience({
 }) {
   const entries = ids.map((id) => {
     const entry = workExperience[version].find((job) => job.id === id);
-    if (!entry) throw new Error(`Missing career entry ${version}/${id}`);
+    if (!entry) {
+      throw new Error(`Missing career entry ${version}/${id}`);
+    }
+
     return entry;
   });
 

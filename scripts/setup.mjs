@@ -1,8 +1,8 @@
 import process from 'node:process';
 import {execFileSync} from 'node:child_process';
 
-if (process.versions.node.split('.')[0] !== '24') {
-  throw new Error('Use Node 24 (see .nvmrc) before running setup.');
+if (process.versions.node.split('.', 1)[0] !== '26') {
+  throw new Error('Use Node 26 (see .nvmrc) before running setup.');
 }
 
 for (const command of ['python3', 'pdfinfo', 'pdftotext', 'pdftoppm']) {

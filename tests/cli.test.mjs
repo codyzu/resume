@@ -15,7 +15,7 @@ test('CLI rejects unknown variants, options and missing values', () => {
     ['--out-dir', '--public'],
     ['--typo'],
   ]) {
-    assert.throws(() => parseArguments(arguments_));
+    assert.throws(() => parseArguments(arguments_), Error);
   }
 });
 
@@ -74,15 +74,18 @@ test('public rendering includes only the three public CVs and rejects CERN selec
       directory,
     ]);
     const files = await readdir(directory);
-    assert.deepEqual(files.sort(), [
-      'cv-cody-zuschlag-community.pdf',
-      'cv-cody-zuschlag-dev.pdf',
-      'cv-cody-zuschlag-devrel.pdf',
-    ]);
+    assert.deepEqual(
+      files.toSorted((a, b) => a.localeCompare(b)),
+      [
+        'cv-cody-zuschlag-community.pdf',
+        'cv-cody-zuschlag-dev.pdf',
+        'cv-cody-zuschlag-devrel.pdf',
+      ],
+    );
     for (const version of ['cern-it', 'cern-control']) {
       assert.throws(
         () => parseArguments(['--public', '--variant', version]),
-        /not approved/,
+        /not approved/v,
       );
     }
   } finally {

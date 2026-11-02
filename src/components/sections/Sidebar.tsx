@@ -7,8 +7,10 @@ import Contact from '../contact/Contact.js';
 import Skills from '../skills/Skills.js';
 import {type PublicVersion} from '../../version.js';
 
+const defaultImagePath = join(packageDirectory, 'images', portraitFilename);
+
 export default function Sidebar({
-  imagePath = join(packageDirectory, 'images', portraitFilename),
+  imagePath = defaultImagePath,
   version,
 }: {
   readonly imagePath?: string;

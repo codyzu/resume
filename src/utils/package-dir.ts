@@ -1,4 +1,4 @@
-import {packageDirectorySync} from 'pkg-dir';
+import {packageDirectorySync} from 'package-directory';
 
 function getPackageDirectory(): string {
   const directory = packageDirectorySync({cwd: import.meta.dirname});

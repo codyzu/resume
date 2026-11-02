@@ -1,6 +1,6 @@
 # Working on the CVs
 
-- Use Node 24 (`.nvmrc`) and the pnpm version pinned in `package.json`.
+- Use Node 26 (`.nvmrc`) and the pnpm version pinned in `package.json`.
   `pnpm run setup` installs both locked dependency sets and checks Python/Poppler.
 - Run `pnpm check` before handing off code changes. It type-checks, lints,
   runs integration tests, renders all CVs, checks PDFs, and builds the public site.

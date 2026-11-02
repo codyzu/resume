@@ -6,9 +6,20 @@ developer relations (`devrel`), and hardware community (`hw`). The local applica
 
 ## Setup
 
-Use Node 24 (`nvm use` with `.nvmrc`) and the pnpm version pinned in
-`package.json`. Enable it with `corepack enable`, or install that pnpm version
-with your preferred package manager. Install Python 3 and Poppler:
+Use Node 26 (`nvm use` with `.nvmrc`) and the pnpm version pinned in
+`package.json`:
+
+```sh
+nvm install
+nvm use
+npm install --global pnpm@12.16.1
+```
+
+TypeScript stays on 6.0.x because the current XO/typescript-eslint releases require
+its compiler API and do not support TypeScript 7 yet. Upgrade it when that support
+lands. Node and React types are selected explicitly in `tsconfig.json`.
+
+Install Python 3 and Poppler:
 
 ```sh
 # macOS
@@ -117,7 +128,7 @@ Multiply all of that over wanting multiple versions targeting different types of
 Laying in bed one night, wishing my resume worked more like code, providing composition and the history of source control, I had an idea... why not just write it in code and use react-pdf to render it to pdf?
 
 ### The stack
-- Node.js 24 with TypeScript compilation for TSX/React components.
+- Node.js 26 with TypeScript compilation for TSX/React components.
 - Typescript to facilitate refactoring when I need to make those pesky tweaks.
 - [react-pdf](https://react-pdf.org/) because at the end of the day, I want a pdf.
 - react because this is all about the view and I want the flexibility of components.

@@ -5,13 +5,13 @@ export const projects: List[] = [
     header: 'Full-Stack Application Development',
     items: [
       {
-        text: 'Led a team to architect and build an AI powered CEO recruitment platform in Azure.',
+        text: 'Technical lead assignment on an Azure executive recruitment platform (2024): integrated OpenFGA authorization alongside Auth0 authentication during development.',
       },
       {
-        text: 'Architected and deployed a serverless CMS framework combining JAMstack and API-driven methodologies.',
+        text: 'Contributed React components, tooling and PostgreSQL migrations to Orion, a Gatsby/Hasura CMS used by EFQM.',
       },
       {
-        text: 'Built a cloud-first e-commerce platform leveraging React, GraphQL, and Node.js.',
+        text: 'Delivered performance and architecture audits of Node.js/TypeScript applications, identifying bottlenecks and recommending changes.',
       },
     ],
   },
@@ -19,8 +19,8 @@ export const projects: List[] = [
     header: 'Open Source Contributions',
     items: [
       {
-        header: 'Node.js Core Development',
-        text: 'Contributed documentation. Triaged issues to find issues suitable for first time contributors. Conducted workshops to onboard contributors to Node.js. Member of the OpenJs Cross Project Foundation.',
+        header: 'Node.js Contributor Support',
+        text: 'Contributed documentation. Triaged issues to find issues suitable for first time contributors. Conducted workshops to onboard contributors to Node.js. Served on the OpenJS Cross Project Council.',
       },
       {
         header: 'GraphQL API Implementation',

@@ -4,9 +4,9 @@ import {style} from '../../utils/style.js';
 import Text from '../Text.js';
 import {packageDirectory} from '../../utils/package-dir.js';
 import {keyWords} from '../../data/key-words.js';
-import {type Version} from '../../version.js';
+import {type PublicVersion} from '../../version.js';
 
-export default function Title({version}: {readonly version: Version}) {
+export default function Title({version}: {readonly version: PublicVersion}) {
   return (
     <View
       style={style('mt-12 bg-sky-800 pt-4 px-4 pb-2 text-white w-full gap-2')}

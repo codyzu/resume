@@ -1,172 +1,232 @@
 import {type CareerEntry} from './types.js';
 
-// Existing main-branch wording; provenance and current status still require review.
+const nearformEngineering = {
+  cms: 'Orion CMS for EFQM: React/Gatsby components, tooling, Hasura/GraphQL integration, PostgreSQL schema design, SQL, migrations and development setup.',
+  'design-system':
+    'Contributed to a 70+ page TELUS design-system specification, multi-brand design-token build tooling, documentation and internal adoption presentations.',
+  'architecture-reviews':
+    'Audited large Node.js/TypeScript codebases for performance bottlenecks and architectural complexity; delivered findings and recommendations.',
+};
+
+const nearformCommunity = {
+  'speaking-program':
+    'Designed and ran an international conference speaking program for Nearform engineers.',
+  'content-revamp':
+    'Reworked technical content processes to support contributions across teams.',
+  'workflow-automation':
+    'Integrated systems and automated workflows, including business insight dashboards.',
+  'cross-functional-collaboration':
+    'Coordinated engineering, marketing, sales and talent stakeholders.',
+};
+
+const nearformDevrel = {
+  workshops:
+    'Delivered JavaScript, Node.js and React Native workshops for engineers and conference participants.',
+  accessibility:
+    'Contributed fixes to FINOS a11y-theme-builder, joined project meetings and presented it at conferences.',
+  'technical-content':
+    'Created technical talks, articles and demonstrations for international developer audiences.',
+  'event-partnerships':
+    'Worked with external stakeholders on community events.',
+  'social-media':
+    'Created social and technical content promoting open-source projects.',
+};
+
+// Shared career facts confirmed by the applicant; see docs/applications/cern.md.
 export const career = {
-  'nearform-community': {
-    role: 'Developer Relations Community Lead',
-    organization: 'Nearform',
+  xen: {
+    role: 'Community Manager',
+    organization: 'Xen Project',
+    dateRange: 'Feb 2025 - Present',
     location: 'Remote',
-    dateRange: '2024 - Present',
     contributions: {
-      'open-source-leadership':
-        'Led open-source initiatives for Node.js and OpenJS projects, driving community engagement and recognition.',
+      community:
+        'Manage stakeholder engagement, meetings, budgets and conferences for the international Xen Project community.',
+      website:
+        'Migrated the website from Hugo/Sass to Astro/UnoCSS, maintaining deployment continuity; Hugo removed, visual redesign ongoing.',
+      'ci-testing':
+        'Substantially reworked existing GitLab CI/CD; added Playwright content, ARIA snapshot, visual regression and accessibility checks.',
+      'embedded-demo':
+        'Extended a Xen Troops Raspberry Pi demo in 2025 with a dashboard, sensor-reading domain and Python web API; integrated Yocto/Zephyr components and troubleshot the system.',
+    },
+  },
+  nearform: {
+    role: 'Software Engineering & Developer Relations',
+    organization: 'Nearform',
+    dateRange: 'Dec 2019 - Dec 2024',
+    location: 'Remote',
+    contributions: {
+      ...nearformCommunity,
+      ...nearformDevrel,
+      ...nearformEngineering,
+      progression:
+        'Senior Software Engineer (2019-22); Developer Relations Engineer, then Staff (2022-24); Community Lead (May-Dec 2024). Technical lead assignment in 2024.',
+      authorization:
+        'Technical lead assignment, ghSMART (2024): supervised authorization proof of concept and personally integrated OpenFGA permissions alongside Auth0 authentication in an Azure application still in development.',
       mentoring:
-        'Mentored engineers in JavaScript and React, enhancing technical depth and productivity.',
-      'contributor-support':
-        'Guided employees in contributing to high-profile OSS projects like Node.js and Fastify.js.',
-      'content-process':
-        'Streamlined content processes, boosting organizational contributions.',
-      'speaking-program':
-        'Designed and executed a global event speaking program, resulting in significant increase in speaker representation from Nearform at international conferences.',
-      'community-recognition':
-        'Championed OSS engagement, mentoring employees to contribute to high-profile projects like Node.js and Fastify.js, leading to recognition within the OpenJS Foundation.',
-      'content-revamp':
-        'Lead technical content process revamping to foster content contributions throughout the organization.',
-      'steering-and-policy':
-        'Participated in OSS steering committee and crafted internal policies and programs.',
-      'workflow-automation':
-        'Customized and automated workflows by integrating systems and creating business insight dashboards.',
-      'cross-functional-collaboration':
-        'Facilitated cross-functional collaboration between engineering, marketing, sales, and talent.',
-    },
-  },
-  'nearform-devrel': {
-    role: 'Staff Developer Relations Engineer',
-    organization: 'Nearform',
-    location: 'Remote',
-    dateRange: '2022 - 2024',
-    contributions: {
-      'node-contributions':
-        'Facilitated Node.js contributions as an OpenJS Foundation member, fostering collaboration and innovation.',
-      workshops:
-        'Delivered technical workshops for clients, teams, and conferences, promoting best practices in JavaScript and Node.js.',
-      accessibility:
-        'Maintained the FINOS a11y-theme-builder project, enhancing accessibility in financial platforms.',
-      'technical-content':
-        'Produced high-impact technical content, including conference talks and blogs, elevating Nearform\u2019s thought leadership.',
-      speaking: 'International conference speaking.',
-      video:
-        'Video content creation including a series of Fireside Chats with tech leaders.',
-      'pre-sales': 'Performed pre-sales demos and lead generation at events.',
-      'event-partnerships':
-        'Partnered with external stakeholders to align community event messaging with strategic goals.',
-      'social-media':
-        'Managed social media campaigns and technical content to promote open-source projects, increasing online engagement.',
-    },
-  },
-  'nearform-engineering': {
-    role: 'Senior Full-Stack Engineer',
-    organization: 'Nearform',
-    location: 'Remote',
-    dateRange: '2019 - 2022',
-    contributions: {
-      'design-system':
-        'Developed a "Design System of Systems," unifying branding and improving delivery for a global telecom client.',
-      'architecture-reviews':
-        'Reviewed architectures for cloud-based applications, optimizing performance and reliability.',
-      cms: 'Built a serverless CMS with TypeScript and GraphQL, reducing deployment time.',
-      'react-applications':
-        'Engineered scalable React applications with cloud integrations, enhancing user experience.',
-      'web-development-course':
-        'Developed and taught cutting edge Web Development course teaching 3rd year students how to develop full-stack web applications using JavaScript technologies and deployed to GCP. Ensured alignment with involving industry standards.',
-    },
-  },
-  teaching: {
-    role: 'University Instructor',
-    organization: 'Institut Universitaire de Technology',
-    location: 'Annecy, France',
-    dateRange: '2018-Present',
-    contributions: {
-      'web-teaching':
-        'Educated ~150 students annually in full-stack web development using JavaScript and GCP, aligning courses with industry standards.',
-      mentoring:
-        'Mentored students into industry roles, achieving a 90% placement rate within six months of graduation.',
-      'enterprise-simulations':
-        'Led enterprise simulations, teaching resource management and market strategy.',
-      'course-design':
-        'Developed and taught cutting edge Web Development course teaching 3rd year students how to develop full-stack web applications using JavaScript technologies and deployed to GCP. Ensured alignment with involving industry standards.',
+        'Delivered workshops, mentored engineers and supported open-source participation during subsequent developer-relations and community roles.',
     },
   },
   hubware: {
     role: 'Lead Developer',
     organization: 'Hubware',
+    dateRange: 'Mar 2017 - Nov 2019',
     location: 'Remote',
-    dateRange: '2017-2018',
     contributions: {
       'team-leadership':
-        'Directed a distributed team to develop an AI-driven customer support solution, boosting productivity for enterprise clients.',
+        'Technical lead in a five-developer team; built Node.js services in Docker and deployed applications on Google Kubernetes Engine.',
+      'production-support':
+        'Troubleshot restarting pods and slow database requests; supported live applications, including urgent after-hours issues, and helped establish CI for blue/green testing.',
       'cloud-architecture':
-        'Architected scalable backend services and implemented best practices for cloud deployment.',
+        'Built with managed PostgreSQL, Cloud Functions, Pub/Sub and Firestore; deployed applications on GKE.',
     },
   },
   axway: {
-    role: 'Senior Software Engineer',
-    organization: 'Axway & Appcelerator',
+    role: 'Senior Software Engineer II',
+    organization: 'Axway / Appcelerator',
+    dateRange: 'Jun 2013 - Feb 2017',
     location: 'Annecy, France',
-    dateRange: '2013-2017',
     contributions: {
-      'api-builder':
-        'Contributed to API builder for rapidly building APIs with a a scalable cloud service and developed CI/CD pipelines, enhancing developer productivity.',
+      'java-osgi':
+        'Contributed to Java/OSGi software in a 40+ developer project using Scrum of Scrums; later worked on Appcelerator following its acquisition.',
       'performance-metrics':
-        'Designed a performance metrics pipeline in Python and contributed to enterprise Java applications for API management.',
+        'Wrote Python performance tests and VM test-setup scripts, built InfluxDB/Grafana dashboards and contributed a capacity-planning guide.',
+      'api-builder':
+        'Worked on deployment automation and Node.js/Docker applications; introduced PostgreSQL on a large Node.js project using Kubernetes.',
     },
   },
   beautec: {
     role: 'Solution Developer',
-    organization: 'BeauTec',
+    organization: 'BeauTec (m:pro subsidiary)',
+    dateRange: 'Mar 2011 - Jan 2013',
     location: 'Annecy, France',
-    dateRange: '2011-2013',
     contributions: {
-      dashboards:
-        'Delivered real-time dashboards and reporting systems, improving operational visibility for manufacturing and logistics clients.',
       integration:
-        'Developed scalable integration frameworks for enterprise systems.',
+        'Developed modular enterprise integrations in C#, ASP.NET and ADO.NET, using SQL Server and Oracle PL/SQL business logic.',
+      interfaces:
+        'Integrated SAP, OPC, SciForma and OSIsoft PI; contributed CI, source-control and process improvements as part of the m:pro team.',
+      dashboards:
+        'Developed real-time dashboards and reporting for manufacturing and logistics systems.',
     },
   },
   hamilton: {
-    role: 'Senior Software Engineer',
+    role: 'Senior Firmware Engineer',
     organization: 'Hamilton Company',
+    dateRange: 'Jan 2009 - Mar 2011',
     location: 'Reno, Nevada, USA',
-    dateRange: '2009-2011',
     contributions: {
       'firmware-and-drivers':
-        'Designed C++ firmware and Windows CE drivers for laboratory devices, ensuring ISO compliance.',
-      'robotics-api':
-        'Developed APIs for robotic components and created secure firmware update protocols.',
-      'hardware-interfaces':
-        'Developed firmware for robotic laboratory devices, integrating with low level memory mapped I/O devices.',
+        'Developed C/C++ ARM firmware, hardware interfaces and Windows CE drivers on a vendor-supplied BSP for laboratory devices.',
       'driver-interop':
-        'Developed drivers for Windows CE providing .NET APIs to low-level firmware and secure firmware updates.',
+        'Exposed low-level operations to C# through interop/marshalling; implemented connected-device firmware updates and boot-related code.',
+      'quality-process':
+        'Contributed requirements, design and validation documentation; ensured own work followed ISO 9001 processes.',
+      'robotics-api':
+        'Implemented C# APIs for low-level device operations and firmware updates for connected devices.',
+      'hardware-interfaces':
+        'Developed C++ ARM firmware and memory-mapped hardware interfaces for robotic laboratory devices.',
       'firmware-architecture':
-        'Architected C++ based firmware exposing high level APIs to control robotic components.',
+        'Developed firmware exposing APIs to control robotic components.',
     },
   },
   igt: {
     role: 'Firmware Engineer',
-    organization: 'International Game Technology',
+    organization: 'International Game Technology / IGT',
+    dateRange: 'Jul 2007 - Dec 2008',
     location: 'Reno, Nevada, USA',
-    dateRange: '2007-2008',
     contributions: {
       'usb-firmware':
-        'Engineered C and assembly firmware for integrating USB devices into gaming machines.',
+        'Developed C/assembly firmware for USB peripherals, C++ networking/game-related code, C#/.NET test tools and technical documentation.',
       'test-tools':
-        'Built .NET-based test tools to validate firmware functionality.',
+        'Built C#/.NET test tools and technical documentation for firmware validation.',
+    },
+  },
+  'nearform-community': {
+    role: 'Developer Relations Community Lead',
+    organization: 'Nearform',
+    location: 'Remote',
+    dateRange: 'May - Dec 2024',
+    contributions: {
+      ...nearformCommunity,
+      'open-source-leadership':
+        'Supported Node.js and OpenJS participation, mentoring engineers and coordinating open-source initiatives.',
+      mentoring:
+        'Mentored engineers in JavaScript and React and supported technical knowledge sharing.',
+      'contributor-support':
+        'Guided colleagues contributing to Node.js and Fastify projects.',
+      'content-process':
+        'Coordinated technical content contributions across the organization.',
+      'community-recognition':
+        'Supported employee participation in OpenJS and other open-source communities.',
+      'steering-and-policy':
+        'Participated in the open-source steering committee and contributed internal policies and programs.',
+    },
+  },
+  'nearform-devrel': {
+    role: 'Developer Relations Engineer / Staff',
+    organization: 'Nearform',
+    location: 'Remote',
+    dateRange: 'Jan 2022 - Apr 2024',
+    contributions: {
+      ...nearformDevrel,
+      'node-contributions':
+        'Contributed Node.js documentation and issue triage; served on the OpenJS Cross Project Council.',
+      speaking: 'Spoke at international developer conferences.',
+      video:
+        'Produced video content, including fireside chats with technical leaders.',
+      'pre-sales':
+        'Delivered technical demonstrations and supported pre-sales at events.',
+    },
+  },
+  'nearform-engineering': {
+    role: 'Senior Software Engineer',
+    organization: 'Nearform',
+    location: 'Remote',
+    dateRange: 'Dec 2019 - Jan 2022',
+    contributions: {
+      ...nearformEngineering,
+      'react-applications':
+        'Built React components and application tooling for client and open-source projects.',
+      'web-development-course':
+        'Developed practical web-development teaching with JavaScript, databases and cloud deployment.',
+    },
+  },
+  teaching: {
+    role: 'University Instructor',
+    organization: 'IUT Annecy / Tétras',
+    location: 'Annecy, France',
+    dateRange: '2018-19 academic year - Present',
+    contributions: {
+      'teaching-overview':
+        'Teach career development, enterprise simulations and practical web development across approximately 125-130 students annually. Tétras teaching includes PostgreSQL, CI and virtualization.',
+      'web-teaching':
+        'Teach at IUT Annecy and Tétras, reaching approximately 125-130 students annually across career development, enterprise simulations and practical web courses.',
+      mentoring:
+        'Mentor students in career development, technical projects and preparation for industry.',
+      'enterprise-simulations':
+        'Run enterprise simulations covering resource management and business decisions.',
+      'course-design':
+        'Design practical web-development teaching at Tétras, including PostgreSQL, CI and virtualization.',
     },
   },
   'open-source': {
-    role: 'Open Source Ambassador, Maintainer, Community Builder',
+    role: 'Open Source Contributor & Community Builder',
     organization: 'FINOS / OpenJS Foundation',
-    location: '',
-    dateRange: '2019-Present',
+    location: 'Remote',
+    dateRange: 'Selected service',
     contributions: {
+      'technical-speaking':
+        'React Summit (2022): PostgreSQL, Node.js and React, at a conference with 1,500+ attendees. NodeConf EU (2022-23): Node.js contributor and React Native workshops.',
+      'selected-service':
+        'Open-source service includes Node.js documentation and issue triage, past OpenJS Cross Project Council service, and fixes and presentations for FINOS a11y-theme-builder.',
       'ecosystem-contributions':
-        'Led contributions to foundational projects like Node.js and a11y-theme-builder, driving accessibility and ecosystem innovation.',
+        'Contributed Node.js documentation and issue triage, and small fixes to FINOS a11y-theme-builder.',
       specifications:
-        'Collaborated with community members to create specifications and technical documentation, fostering global adoption.',
+        'Contributed technical documentation and shared engineering practices with open-source communities.',
       inclusion:
-        'Advocated for diversity and inclusion at events such as Grace Hopper Open Source Day, increasing diverse participation.',
+        'Participated in Grace Hopper Open Source Day and accessibility events.',
       events:
-        'Participated in and organized global events and fostered attendee engagement and interactions',
+        'Organized events and supported international community collaboration.',
     },
   },
 } satisfies Record<string, CareerEntry>;

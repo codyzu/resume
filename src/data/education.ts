@@ -1,2 +1,3 @@
-export const education = `*Bachelor (x2) of Science in Software & Computer Engineering Technology | 2007*
-*Top of Class, Honors | Oregon Institute of Technology (Klamath Falls, Oregon, USA)*`;
+export const education = `*Two Bachelor of Science degrees | Oregon Institute of Technology | 2007*
+Computer Systems Engineering Technology; Software Engineering Technology
+Lew Jones Award for Academic Excellence`;

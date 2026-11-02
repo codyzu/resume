@@ -1,19 +1,15 @@
-import {type Version} from '../version.js';
+import {type PublicVersion} from '../version.js';
 
-export const keyWords: Record<Version, string[]> = {
+export const keyWords: Record<PublicVersion, string[]> = {
   dev: [
-    'Developer Relations Leader',
-    'Open Source Advocate',
-    'International Public Speaker',
+    'Software Engineer',
+    'Technical Leader',
+    'Enterprise & Cloud Applications',
   ],
   devrel: [
     'Developer Relations Leader',
     'Open Source Advocate',
     'International Public Speaker',
   ],
-  hw: [
-    'Developer Relations Leader',
-    'Community Marketing Expert',
-    'Technical Program Manager',
-  ],
+  hw: ['Open Source Community Leader', 'Technical Program Manager'],
 };

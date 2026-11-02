@@ -21,115 +21,100 @@ function select<Id extends CareerId>(
   };
 }
 
+export const supportingExperience = {
+  teaching: select('teaching', ['teaching-overview']),
+  openSource: select('open-source', ['selected-service']),
+  service: select('open-source', ['technical-speaking', 'selected-service']),
+};
+
+const cernIt = [
+  select('xen', ['community', 'website', 'ci-testing']),
+  select('nearform', [
+    'progression',
+    'cms',
+    'authorization',
+    'architecture-reviews',
+    'design-system',
+  ]),
+  select('hubware', [
+    'team-leadership',
+    'production-support',
+    'cloud-architecture',
+  ]),
+  select('axway', ['java-osgi', 'performance-metrics', 'api-builder']),
+  select('beautec', ['integration', 'interfaces']),
+  select('hamilton', ['firmware-and-drivers', 'driver-interop']),
+  select('igt', ['usb-firmware']),
+];
+const cernControl = [
+  select('xen', ['community', 'embedded-demo', 'website', 'ci-testing']),
+  select('nearform', [
+    'progression',
+    'authorization',
+    'architecture-reviews',
+    'mentoring',
+  ]),
+  select('hubware', ['team-leadership', 'production-support']),
+  select('axway', ['java-osgi', 'performance-metrics', 'api-builder']),
+  select('beautec', ['integration', 'interfaces']),
+  select('hamilton', [
+    'firmware-and-drivers',
+    'driver-interop',
+    'quality-process',
+  ]),
+  select('igt', ['usb-firmware']),
+];
+
 export const workExperience: Record<Version, WorkExperience[]> = {
+  'cern-it': cernIt,
+  'cern-control': cernControl,
   dev: [
-    select('nearform-community', [
-      'open-source-leadership',
-      'mentoring',
-      'contributor-support',
-      'content-process',
-    ]),
-    select('nearform-devrel', [
-      'node-contributions',
-      'workshops',
-      'accessibility',
-      'technical-content',
-    ]),
-    select('nearform-engineering', [
-      'design-system',
-      'architecture-reviews',
+    select('xen', ['community', 'website', 'ci-testing']),
+    select('nearform', [
+      'progression',
       'cms',
-      'react-applications',
+      'authorization',
+      'architecture-reviews',
+      'design-system',
     ]),
-    select('teaching', ['web-teaching', 'mentoring', 'enterprise-simulations']),
-    select('hubware', ['team-leadership', 'cloud-architecture']),
-    select('axway', ['api-builder', 'performance-metrics']),
-    select('beautec', ['dashboards', 'integration']),
-    select('hamilton', ['firmware-and-drivers', 'robotics-api']),
-    select('igt', ['usb-firmware', 'test-tools']),
+    select('hubware', [
+      'team-leadership',
+      'production-support',
+      'cloud-architecture',
+    ]),
+    select('axway', ['java-osgi', 'performance-metrics', 'api-builder']),
+    select('beautec', ['integration', 'interfaces']),
+    select('hamilton', ['firmware-and-drivers', 'driver-interop']),
+    select('igt', ['usb-firmware']),
   ],
   devrel: [
-    select('nearform-community', [
-      'open-source-leadership',
+    select('xen', ['community', 'website', 'ci-testing']),
+    select('nearform', [
+      'progression',
       'speaking-program',
-      'community-recognition',
       'content-revamp',
-    ]),
-    select('nearform-devrel', [
-      'node-contributions',
       'workshops',
-      'accessibility',
-      'technical-content',
-      'speaking',
-      'video',
-      'pre-sales',
-    ]),
-    select('nearform-engineering', [
       'design-system',
-      'architecture-reviews',
-      'cms',
-      'react-applications',
     ]),
-    select('teaching', [
-      'course-design',
-      'web-teaching',
-      'mentoring',
-      'enterprise-simulations',
-    ]),
-    select('hubware', ['team-leadership', 'cloud-architecture']),
-    select('axway', ['api-builder', 'performance-metrics']),
-    select('beautec', ['dashboards', 'integration']),
-    select('hamilton', ['firmware-and-drivers', 'robotics-api']),
-    select('igt', ['usb-firmware', 'test-tools']),
+    select('hubware', ['team-leadership']),
+    select('axway', ['performance-metrics']),
+    select('beautec', ['integration']),
+    select('hamilton', ['firmware-and-drivers']),
+    select('igt', ['usb-firmware']),
   ],
   hw: [
-    select('nearform-community', [
-      'open-source-leadership',
+    select('xen', ['community', 'embedded-demo', 'website', 'ci-testing']),
+    select('nearform', [
+      'progression',
       'speaking-program',
-      'community-recognition',
-      'content-revamp',
-      'steering-and-policy',
-      'workflow-automation',
       'cross-functional-collaboration',
-    ]),
-    select('open-source', [
-      'ecosystem-contributions',
-      'specifications',
-      'inclusion',
-      'events',
-    ]),
-    select('nearform-devrel', [
-      'node-contributions',
-      'workshops',
+      'workflow-automation',
       'accessibility',
-      'technical-content',
-      'speaking',
-      'video',
-      'pre-sales',
-      'event-partnerships',
-      'social-media',
     ]),
-    select('nearform-engineering', [
-      'design-system',
-      'architecture-reviews',
-      'cms',
-      'react-applications',
-      'web-development-course',
-    ]),
-    select('teaching', [
-      'course-design',
-      'web-teaching',
-      'mentoring',
-      'enterprise-simulations',
-    ]),
-    select('hubware', ['team-leadership', 'cloud-architecture']),
-    select('axway', ['api-builder', 'performance-metrics']),
-    select('beautec', ['dashboards', 'integration']),
-    select('hamilton', [
-      'hardware-interfaces',
-      'driver-interop',
-      'firmware-architecture',
-    ]),
-    select('igt', ['usb-firmware', 'test-tools']),
+    select('hubware', ['team-leadership']),
+    select('axway', ['java-osgi']),
+    select('beautec', ['interfaces']),
+    select('hamilton', ['firmware-and-drivers', 'driver-interop']),
+    select('igt', ['usb-firmware']),
   ],
 };

@@ -1,14 +1,14 @@
 import {type ListItem} from '../components/list/ListItem.js';
-import {type Version} from '../version.js';
+import {type PublicVersion} from '../version.js';
 
-const allConferences = {
+export const allConferences = {
   finosLondon: {
     header: 'FINOS Finance Forum London (2024)',
     text: 'Delivered insights on accessibility in open-source development by presenting “Design, Development, AI and Accessibility, Oh My.”',
   },
   stateOfOpenCon: {
     header: 'State of Open Con UK (2024)',
-    text: 'Delivered a presentation on “Inclusive by Design: Revolutionizing Accessibility” attended by over 2,000 industry leaders and developers.',
+    text: 'Delivered a presentation on “Inclusive by Design: Revolutionizing Accessibility” at a conference with over 2,000 attendees.',
   },
   nodeConf: {
     header: 'NodeConf EU (2022, 2023)',
@@ -20,7 +20,7 @@ const allConferences = {
   },
   reactSummit: {
     header: 'React Summit (2022)',
-    text: 'Presented “Full-stack JS Today: Fastify, GraphQL, and React” to 1,500+ attendees, highlighting modern JavaScript development.',
+    text: 'Presented “Full-stack JS Today: Fastify, GraphQL, and React” at a conference with 1,500+ attendees, covering PostgreSQL, Node.js and React.',
   },
   nodeConfWorkshops: {
     header: 'NodeConf EU (2022, 2023)',
@@ -64,105 +64,64 @@ const allConferences = {
   },
 };
 
-const developmentConferences: Array<{header: string; items: ListItem[]}> = [
-  {
-    header: 'Presentations',
-    items: [
-      allConferences.finosLondon,
-      allConferences.stateOfOpenCon,
-      allConferences.nodeConf,
-      allConferences.portoTechHub,
-      allConferences.reactSummit,
-    ],
+const selectedConferences = {
+  engineering: {
+    header: 'React Summit (2022)',
+    text: 'PostgreSQL, Node.js and React at a conference with 1,500+ attendees.',
   },
-  {
-    header: 'Workshops',
-    items: [allConferences.nodeConfWorkshops],
+  workshops: {
+    header: 'NodeConf EU (2022-23)',
+    text: 'Node.js contributor and React Native workshops; talks, emceeing and fireside chats.',
   },
-  {
-    header: 'Panel Discussions and Fireside Chats',
-    items: [
-      allConferences.ghcOsd,
-      allConferences.finosA11y,
-      allConferences.firesideChange,
-    ],
+  accessibility: {
+    header: 'State of Open Con (2024)',
+    text: 'Inclusive by Design: Revolutionizing Accessibility; conference attendance exceeded 2,000.',
   },
-  {
-    header: 'Virtual Engagements',
-    items: [allConferences.openJsCollab, allConferences.ghc],
+  finos: {
+    header: 'FINOS Finance Forum (2024)',
+    text: 'Design, Development, AI and Accessibility, Oh My.',
   },
-];
-
-const devrelConferences: Array<{header: string; items: ListItem[]}> = [
-  {
-    header: 'Conferences',
-    items: [
-      allConferences.finosLondon,
-      allConferences.stateOfOpenCon,
-      allConferences.nodeConf,
-      allConferences.utahJs,
-      allConferences.osExperience,
-      allConferences.devSum,
-      allConferences.devWeek,
-      allConferences.portoTechHub,
-      allConferences.reactSummit,
-    ],
+  apis: {
+    header: 'Open Source Experience (2023)',
+    text: 'Modern Web APIs: Too Much of a Good Thing?',
   },
-  {
-    header: 'Workshops',
-    items: [allConferences.nodeConfWorkshops],
+  designSystems: {
+    header: 'DeveloperWeek (2023)',
+    text: 'Design Tokens Systems and Component Journeys (virtual).',
   },
-  {
-    header: 'Panel Discussions and Fireside Chats',
-    items: [
-      allConferences.ghcOsd,
-      allConferences.finosA11y,
-      allConferences.firesideChange,
-    ],
-  },
-  {
-    header: 'Virtual Engagements',
-    items: [allConferences.openJsCollab, allConferences.ghc],
-  },
-];
-
-const hwCommunityConferences: Array<{header: string; items: ListItem[]}> = [
-  {
-    header: 'Conferences',
-    items: [
-      allConferences.finosLondon,
-      allConferences.stateOfOpenCon,
-      allConferences.nodeConf,
-      allConferences.utahJs,
-      allConferences.osExperience,
-      allConferences.devWeek,
-      allConferences.portoTechHub,
-      allConferences.reactSummit,
-    ],
-  },
-  {
-    header: 'Workshops',
-    items: [allConferences.nodeConfWorkshops],
-  },
-  {
-    header: 'Panel Discussions and Fireside Chats',
-    items: [
-      allConferences.ghcOsd,
-      allConferences.finosA11y,
-      allConferences.firesideChange,
-    ],
-  },
-  {
-    header: 'Virtual Engagements',
-    items: [allConferences.openJsCollab, allConferences.ghc],
-  },
-];
+} satisfies Record<string, ListItem>;
 
 export const conferences: Record<
-  Version,
+  PublicVersion,
   Array<{header: string; items: ListItem[]}>
 > = {
-  dev: developmentConferences,
-  devrel: devrelConferences,
-  hw: hwCommunityConferences,
+  dev: [
+    {
+      header: 'Selected technical speaking',
+      items: [selectedConferences.engineering, selectedConferences.workshops],
+    },
+  ],
+  devrel: [
+    {
+      header: 'Selected speaking & workshops',
+      items: [
+        selectedConferences.accessibility,
+        selectedConferences.engineering,
+        selectedConferences.workshops,
+        selectedConferences.finos,
+        selectedConferences.apis,
+        selectedConferences.designSystems,
+      ],
+    },
+  ],
+  hw: [
+    {
+      header: 'Selected speaking & workshops',
+      items: [
+        selectedConferences.workshops,
+        selectedConferences.accessibility,
+        selectedConferences.finos,
+      ],
+    },
+  ],
 };

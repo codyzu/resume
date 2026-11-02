@@ -1,32 +1,8 @@
-import {type Version} from '../version.js';
+import {type PublicVersion} from '../version.js';
 
-export const summary: Record<Version, string> = {
-  dev: `
-*Results-driven Software Engineer* with 17+ years of experience
-in Node.js, JavaScript, TypeScript, and firmware. Skilled in
-designing and deploying scalable, full-stack applications
-leveraging React, GraphQL, serverless architectures, and AI
-integrations to enhance user experiences and drive efficiency.
-Proven track record of leading development teams, advancing
-open-source ecosystems, and delivering technical excellence on
-high-impact projects. Passionate about building innovative,
-user-centric solutions through modern web technologies and
-fostering collaborative, results- oriented engineering
-environments.
-`,
-  devrel: `
-Experienced *Developer Relations Leader* with 17+ years in firmware, software
-engineering, and open-source advocacy. Proven track record in scaling
-developer communities, leading key open-source initiatives (FINOS, OpenJS),
-and delivering high-impact technical content. Passionate about empowering
-developers through public speaking, teaching, and community building.
-`,
-  hw: `
-Experienced *Developer Relations Leader* with 17+ years in firmware & software
-engineering, open-source advocacy, community engagement, and technical
-program management. Proven success in driving developer engagement
-through strategic marketing, content creation, event lifecycle management, and
-leading key open-source initiatives (FINOS, OpenJS). Passionate about
-empowering developers through community building, teaching, and innovation.
-`,
+export const summary: Record<PublicVersion, string> = {
+  dev: 'Software engineer and technical leader with a career spanning firmware, enterprise integration and cloud applications since 2007. Engineering work includes React, Node.js, TypeScript, PostgreSQL and Kubernetes application deployment. Recent Astro website development, GitLab CI/CD and Playwright testing complement developer-relations and community leadership roles since 2022.',
+  devrel:
+    'Developer relations leader with a software and firmware engineering background spanning a career since 2007. Currently manages the Xen Project community, connecting stakeholders through meetings, conferences and technical projects. Brings international speaking, hands-on workshops, engineer mentoring and open-source collaboration through Nearform, OpenJS and FINOS.',
+  hw: 'Open-source community leader with earlier firmware and hardware-interface engineering experience and a career spanning systems, cloud applications and developer relations since 2007. Currently manages the Xen Project community, alongside website engineering and an embedded demonstration integrating Xen, Yocto, Zephyr and a Python sensor API. Combines technical depth with stakeholder coordination, teaching and international speaking.',
 };

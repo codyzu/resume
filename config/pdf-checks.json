@@ -1,5 +1,71 @@
 {
-  "cv-cody-zuschlag-dev.pdf": {"pages": 2, "text": ["Cody Zuschlag", "Career Summary", "Nearform", "Hamilton"]},
-  "cv-cody-zuschlag-devrel.pdf": {"pages": 2, "text": ["Cody Zuschlag", "Career Summary", "Nearform", "Hamilton"]},
-  "cv-cody-zuschlag-community.pdf": {"pages": 2, "text": ["Cody Zuschlag", "Career Summary", "Nearform", "Hamilton"]}
+  "cv-cody-zuschlag-dev.pdf": {
+    "pages": 2,
+    "text": [
+      "Cody Zuschlag",
+      "Career Summary",
+      "Nearform",
+      "Hamilton",
+      "Xen Project",
+      "Feb 2025",
+      "Astro",
+      "Playwright",
+      "2 / 2",
+      "Lew Jones"
+    ]
+  },
+  "cv-cody-zuschlag-devrel.pdf": {
+    "pages": 2,
+    "text": [
+      "Cody Zuschlag",
+      "Career Summary",
+      "Nearform",
+      "Hamilton",
+      "Xen Project",
+      "Feb 2025",
+      "Astro",
+      "Playwright",
+      "2 / 2",
+      "Lew Jones"
+    ]
+  },
+  "cv-cody-zuschlag-community.pdf": {
+    "pages": 2,
+    "text": [
+      "Cody Zuschlag",
+      "Career Summary",
+      "Nearform",
+      "Hamilton",
+      "Xen Project",
+      "Feb 2025",
+      "Astro",
+      "Playwright",
+      "2 / 2",
+      "Lew Jones"
+    ]
+  },
+  "cv-cody-zuschlag-it-ca-cet-2026-210-ld.pdf": {
+    "pages": 2,
+    "text": [
+      "Cody Zuschlag",
+      "IT-CA-CET-2026-210-LD",
+      "Xen Project",
+      "Nearform",
+      "Hamilton",
+      "PostgreSQL",
+      "Lew Jones"
+    ]
+  },
+  "cv-cody-zuschlag-te-mpe-cb-2026-213-ld.pdf": {
+    "pages": 2,
+    "text": [
+      "Cody Zuschlag",
+      "TE-MPE-CB-2026-213-LD",
+      "Xen Project",
+      "Nearform",
+      "Hamilton",
+      "PostgreSQL",
+      "Lew Jones"
+    ]
+  }
 }

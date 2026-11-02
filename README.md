@@ -1,7 +1,8 @@
 # Resume
 
-Build and publish three React PDF resumes: software engineering (`dev`),
-developer relations (`devrel`), and hardware community (`hw`).
+Build five React PDF resumes, with three public versions: software engineering (`dev`),
+developer relations (`devrel`), and hardware community (`hw`). The local application variants `cern-it` and
+`cern-control` target CERN vacancies and are excluded from publication.
 
 ## Setup
 
@@ -29,7 +30,7 @@ pnpm render                           # all variants → output/pdf/
 pnpm render --variant dev             # one variant
 pnpm render --variant devrel --out-dir /tmp/application
 pnpm dev                              # re-render on source changes
-pnpm check                            # complete validation and public build
+pnpm check                            # local: validate all five, stage public site
 pnpm preview                          # check PDFs and render PNGs for every page
 ```
 
@@ -41,9 +42,14 @@ selection to the publication allowlist. `pnpm start` is an alias for rendering.
 Career facts and named contributions live in `src/data/career.ts`;
 `src/data/work-experience.ts` selects contributions per variant. Layouts choose
 jobs by stable IDs. Education is shared in `src/data/education.ts`.
-This modernization preserves historical main-branch wording; it does not verify
-or update career claims. Review current status, dates, metrics, and credentials
-before using a CV for a new application.
+All five variants use `src/CvLayout.tsx` for the original font roles, terminal
+headings, compact sidebar, photo, links and grey second-page running header.
+Change the portrait once in `src/data/presentation.ts`. Role profiles and
+page composition live in `src/data/profiles.ts`, with CERN-specific profiles
+in `src/data/cern.ts`. The individual `src/Cv*.tsx` renderers select a profile.
+Career dates, titles and selected claims were updated from applicant-supplied
+clarifications for the CERN applications; see `docs/applications/cern.md`.
+Review current status and application fit before using a variant.
 
 `pnpm check` runs TypeScript, XO, Node integration tests, PDF generation,
 PDF checks, and the static public-site build. Poppler checks the exact PDF
@@ -80,17 +86,23 @@ Only explicitly allowlisted variants are rendered into
 never copies arbitrary local PDFs. The download list is generated from that
 allowlist. No Jekyll build is needed. Adding a renderer does not publish it.
 
-Pull requests run validation and upload PDFs/page previews for review. Those
-artifacts may be accessible to repository viewers; "private variant" means
-excluded from the public website, not confidential GitHub artifact storage.
-Main-branch builds deploy only `output/site/` to GitHub Pages after checks pass.
+CI runs `pnpm check` and `pnpm preview` for all five variants. All five PDFs
+and their page previews are uploaded as the downloadable `cv-review` artifact,
+including the CERN versions. These artifacts may be accessible to repository
+viewers. Only the three explicitly allowlisted general CVs are staged into
+`output/site/` and deployed to GitHub Pages. Here, "private variant" means
+excluded from the website, not confidential source or CI artifact storage.
 Set Pages to **GitHub Actions** in repository settings if it is not already.
 No deployment is performed by local commands.
 
 To add a variant: add its version, renderer, manifest entry, and local PDF
 expectations; update the public allowlist only when publication is intended.
-The separate `cern` branch is not included in this workflow change. Its variants
-can be adapted to this interface later.
+The two CERN renderers in `src/CvCern.tsx` use the shared layout, with
+role profiles and explicit page selections in `src/data/cern.ts`. Render them locally with:
+
+```sh
+pnpm render --variant cern-it --variant cern-control
+```
 
 ## Background
 

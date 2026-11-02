@@ -3,9 +3,13 @@ import {conferences} from '../../data/conferences.js';
 import List from '../list/List.js';
 import SectionHeader from '../SectionHeader.js';
 import {style} from '../../utils/style.js';
-import {type Version} from '../../version.js';
+import {type PublicVersion} from '../../version.js';
 
-export default function Conferences({version}: {readonly version: Version}) {
+export default function Conferences({
+  version,
+}: {
+  readonly version: PublicVersion;
+}) {
   return (
     <View style={style('gap-2 w-full')}>
       <SectionHeader>Conferences | Public Speaking</SectionHeader>

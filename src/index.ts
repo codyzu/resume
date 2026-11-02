@@ -7,7 +7,7 @@ import {variants} from './variants.js';
 const options = parseArguments(process.argv.slice(2));
 if (options.help) {
   console.log(
-    'Usage: pnpm render [--variant dev|devrel|hw] [--out-dir PATH] [--public]\nRepeat --variant to select multiple CVs. Default: all variants in output/pdf.',
+    'Usage: pnpm render [--variant dev|devrel|hw|cern-it|cern-control] [--out-dir PATH] [--public]\nRepeat --variant to select multiple CVs. Default: all variants in output/pdf.',
   );
 } else {
   await mkdir(options.outputDirectory, {recursive: true});

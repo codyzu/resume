@@ -63,3 +63,29 @@ test('rendering from a different working directory writes only the selected vari
     await rm(directory, {recursive: true, force: true});
   }
 });
+
+test('public rendering includes only the three public CVs and rejects CERN selections', async () => {
+  const directory = await mkdtemp(path.join(tmpdir(), 'cv-public-'));
+  try {
+    execFileSync(process.execPath, [
+      path.resolve('lib/index.js'),
+      '--public',
+      '--out-dir',
+      directory,
+    ]);
+    const files = await readdir(directory);
+    assert.deepEqual(files.sort(), [
+      'cv-cody-zuschlag-community.pdf',
+      'cv-cody-zuschlag-dev.pdf',
+      'cv-cody-zuschlag-devrel.pdf',
+    ]);
+    for (const version of ['cern-it', 'cern-control']) {
+      assert.throws(
+        () => parseArguments(['--public', '--variant', version]),
+        /not approved/,
+      );
+    }
+  } finally {
+    await rm(directory, {recursive: true, force: true});
+  }
+});

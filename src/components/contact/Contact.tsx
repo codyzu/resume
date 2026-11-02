@@ -16,7 +16,7 @@ export default function Contact() {
       </ContactInfo>
       <ContactInfo Icon={Mail}>
         <Link
-          src={`mailto:${contactInfo.email}}`}
+          src={`mailto:${contactInfo.email}`}
           style={style('text-white no-underline')}
         >
           {contactInfo.email}

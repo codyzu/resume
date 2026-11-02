@@ -7,7 +7,11 @@ import Terminal from './icons/Terminal.js';
 export default function SectionHeader({
   children,
   color,
-}: PropsWithChildren<{readonly color?: string}>) {
+  fontSize,
+}: PropsWithChildren<{
+  readonly color?: string;
+  readonly fontSize?: number;
+}>) {
   return (
     <View
       style={style(
@@ -15,8 +19,18 @@ export default function SectionHeader({
         color && `text-${color}`,
       )}
     >
-      <Terminal style={style('w-[20px] h-[20px]')} color={color} />
-      <Text style={style('text-2xl font-mono font-bold')}>{children}</Text>
+      <Terminal
+        style={{width: (fontSize ?? 18) + 2, height: (fontSize ?? 18) + 2}}
+        color={color}
+      />
+      <Text
+        style={{
+          ...style('text-2xl font-mono font-bold'),
+          ...(fontSize === undefined ? {} : {fontSize}),
+        }}
+      >
+        {children}
+      </Text>
     </View>
   );
 }

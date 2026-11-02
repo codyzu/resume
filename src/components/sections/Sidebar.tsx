@@ -1,15 +1,18 @@
+import {join} from 'node:path';
 import {Image, View} from '@react-pdf/renderer';
+import {portraitFilename} from '../../data/presentation.js';
+import {packageDirectory} from '../../utils/package-dir.js';
 import {style} from '../../utils/style.js';
 import Contact from '../contact/Contact.js';
 import Skills from '../skills/Skills.js';
-import {type Version} from '../../version.js';
+import {type PublicVersion} from '../../version.js';
 
 export default function Sidebar({
-  imagePath,
+  imagePath = join(packageDirectory, 'images', portraitFilename),
   version,
 }: {
-  readonly imagePath: string;
-  readonly version: Version;
+  readonly imagePath?: string;
+  readonly version: PublicVersion;
 }) {
   return (
     <View style={style('gap-8 w-full')}>
